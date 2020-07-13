@@ -1,0 +1,26 @@
+.grid-senhas{
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-row-gap: 20%;
+  margin: 7.5% 7% 0 0;
+  text-align: center;
+}
+
+h2{
+  color: #AF1C26;
+  text-shadow: 1px 1px black;
+}
+
+.icone-senhas{
+  color: #AF1C26;
+}
+
+.badge-light{
+  background-color: #565e69;
+  color: white;
+  cursor: default;
+}
+.badge-light:hover{
+  background-color: #AF1C26;
+  cursor: pointer;
+}

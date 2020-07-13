@@ -1,0 +1,29 @@
+.inicio-diferenciados{
+  text-align: center;
+  margin-top: 8%;
+  color: #AF1c26;
+  text-shadow: 1px 1px black;
+}
+
+.card{
+  border: 0 !important;
+  width: 65%;
+  background-color: #565e69;
+}
+.card:hover{
+  background-color: #8996a9;
+}
+
+.btn-link{
+  color: white;
+}
+.btn-link:hover{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.btn-link:focus{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}

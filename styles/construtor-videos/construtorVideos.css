@@ -1,0 +1,54 @@
+.grid-construtor-videos{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.grid-construtor-videoaula{
+  display: grid;
+  grid-template-columns: 30% 60%;
+}
+
+.margin-paragrafo{
+  margin-top: 12.5%;
+}
+
+.titulo-secao{
+  font-size: 2em;
+  color: #565e69;
+}
+
+.botao-contrutor-video{
+  padding: 0.5% 8% 0.5% 8%;
+  border-radius: 5px;
+  background-color: #AF1C26;
+  color: white;
+  border: none;
+}
+.botao-contrutor-video:focus{
+  outline: transparent;
+}
+.botao-contrutor-video:hover{
+  background-color: #565e69;
+  border: 3px solid #565e69;
+}
+
+input{
+  background-color: #565e69;
+  color: white;
+  outline: transparent;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.subtitulo{
+  font-weight: bold;
+}
+
+::placeholder{
+  color: white;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 0.8em;
+}

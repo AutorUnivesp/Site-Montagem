@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Modelos Diferenciados | Montagem</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles/prism/prism.css">
+    <link rel="stylesheet" href="../styles/home/home.css">
+    <link rel="stylesheet" href="../styles/diferenciados/diferenciados.css">
+  </head>
+  <body>
+    <!-- INICIO BARRA DE NAVEGAÇÃO -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; z-index: 999; width: 100%; top: 0;">
+  <a class="navbar-brand" href="home.html">Montagem App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-tools"></i>
+          Construtores
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="construtorVideos.html">Construtor Vídeos</a>
+          <a class="dropdown-item" href="paginaInicial.html">Página Inicial</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="PlanilhaVideoaula.html"><i class="fas fa-video"></i> Videoaulas</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="codigos.html"><i class="fas fa-code"></i>
+        Códigos</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="controlePlanilha.html"><i class="fas fa-table"></i> Controle</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="guiaDeUso.html"><i class="fas fa-book"></i> Guia de Uso</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-folder-plus"></i>
+          Mais
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="bannersProfessores.html">Banners / Professores</a>
+          <a class="dropdown-item" href="senhas.html">Senhas</a>
+          <a class="dropdown-item" href="diferenciados.html">Modelos Diferenciados</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a title="github da montagem" target="_blank" class="icone-nav" href="https://github.com/AutorUnivesp/Montagem"><i class="fab fa-github fa-2x"></i></a>
+      <a title="site to trello" target="_blank" class="icone-nav" href="https://trello.com/"><i class="fab fa-trello fa-2x"></i></a>
+      <a title="google drive" target="_blank" class="icone-nav" href="https://drive.google.com/drive/my-drive"><i class="fab fa-google-drive fa-2x"></i></a>
+      <a title="página de login do Canvas" target="_blank" style="margin-right: 0px;" class="icone-nav" href="https://login.univesp.br/"><i class="fas fa-globe fa-2x"></i></a>
+    </form>
+  </div>
+</nav>
+  <!-- FIM BARRA DE NAVEGAÇÃO -->
+
+    <div class="inicio-diferenciados">
+      <h1>MODELOS DE EXERCÍCIOS DIFERENCIADOS</h1>
+    </div>
+
+    <div class="accordion mt-3" id="accordionExample">
+  <div class="card mt-2">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          MODELO 1 - SELECIONE A CERTA
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <pre><code class="language-html">
+&lt;div id="conteudo"&gt;
+  &lt;div class="item ativo"&gt;
+    &lt;ol class="lista-perguntas"&gt;
+
+      &lt;li&gt; Pergunta 1
+        &lt;div class="alternativas"&gt;
+          &lt;div id="1_a" class="btn-challenge"&gt;Alternativa 1&lt;/div&gt;
+          &lt;div id="1_b" class="btn-challenge"&gt;Alternativa 2&lt;/div&gt;
+          &lt;div class="feedback"&gt;&lt;p id="1_p"&gt;&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+
+      &lt;li&gt; Pergunta 2
+        &lt;div class="alternativas"&gt;
+          &lt;div id="2_a" class="btn-challenge"&gt;Alternativa 1&lt;/div&gt;
+          &lt;div id="2_b" class="btn-challenge"&gt;Alternativa 2&lt;/div&gt;
+          &lt;div class="feedback"&gt;&lt;p id="2_p"&gt;&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+
+      &lt;li&gt; Pergunta 3
+        &lt;div class="alternativas"&gt;
+          &lt;div id="3_a" class="btn-challenge"&gt;Alternativa 1&lt;/div&gt;
+          &lt;div id="3_b" class="btn-challenge"&gt;Alternativa 2&lt;/div&gt;
+          &lt;div class="feedback"&gt;&lt;p id="3_p"&gt;&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+
+      &lt;li&gt; Pergunta 4
+        &lt;div class="alternativas"&gt;
+          &lt;div id="4_a" class="btn-challenge"&gt;Alternativa 1&lt;/div&gt;
+          &lt;div id="4_b" class="btn-challenge"&gt;Alternativa 2&lt;/div&gt;
+          &lt;div class="feedback"&gt;&lt;p id="4_p"&gt;&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+
+      &lt;li&gt; Pergunta 5
+        &lt;div class="alternativas"&gt;
+          &lt;div id="5_a" class="btn-challenge"&gt;Alternativa 1&lt;/div&gt;
+          &lt;div id="5_b" class="btn-challenge"&gt;Alternativa 2&lt;/div&gt;
+          &lt;div id="5_c" class="btn-challenge"&gt;Alternativa 3&lt;/div&gt;
+          &lt;div id="5_d" class="btn-challenge"&gt;Alternativa 4&lt;/div&gt;
+          &lt;div class="feedback"&gt;&lt;p id="5_p"&gt;&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+      </div>
+    </div>
+  </div>
+  <div class="card mt-2">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          MODELO 2 - CAIXA DE RESPOSTA CURTA
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <pre><code class="language-html">
+  &lt;div class="content"&gt;
+    &lt;ol&gt;
+      &lt;!--Questão 1--&gt;
+      &lt;li style="color: #005662; font-weight: bold;"&gt;
+        &lt;span style="color: #333; font-weight: normal;"&gt; Pergunta 1:&lt;/span&gt;&lt;br /&gt;
+        &lt;div style="margin: 20px 0 20px 0;"&gt;
+          &lt;!-- REACT INPUT--&gt;
+        &lt;div class="inputfield"&gt;&lt;/div&gt;
+        &lt;div class="collapse-cx-curta1"&gt;Resposta: xxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+
+       &lt;!--Questão 2--&gt;
+      &lt;li style="color: #005662; font-weight: bold;"&gt;
+        &lt;span style="color: #333; font-weight: normal;"&gt; Pergunta 2:&lt;/span&gt;&lt;br /&gt;
+        &lt;div style="margin: 20px 0 20px 0;"&gt;
+          &lt;!-- REACT INPUT--&gt;
+        &lt;div class="inputfield"&gt;&lt;/div&gt;
+        &lt;div class="collapse-cx-curta1"&gt;Resposta: xxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+
+      &lt;!--Questão 3--&gt;
+      &lt;li style="color: #005662; font-weight: bold;"&gt;
+        &lt;span style="color: #333; font-weight: normal;"&gt; Pergunta 3:&lt;/span&gt;&lt;br /&gt;
+        &lt;div style="margin: 20px 0 20px 0;"&gt;
+          &lt;!-- REACT INPUT--&gt;
+        &lt;div class="inputfield"&gt;&lt;/div&gt;
+        &lt;div class="collapse-cx-curta1"&gt;Resposta: xxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;!--Botão mostrar Gabarito--&gt;
+&lt;div class="btn-cx-curta botao-enviar-gabarito1" style="width: 150px; font-size: 14px;"&gt;
+  Mostrar Gabarito
+&lt;/div&gt;
+        </code></pre>
+      </div>
+    </div>
+  </div>
+  <div class="card mt-2">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          MODELO 3 - CAIXA DE RESPOSTA LONGA
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <pre><code class="language-html">
+&lt;!-- CONTEÚDO --&gt;
+&lt;div class="container"&gt;
+  &lt;br /&gt;  &lt;br /&gt;
+  &lt;p style="padding-left: 30px;"&gt;
+    &lt;span style="font-size: 14pt; color: #a01f1f;"&gt;&lt;strong&gt;Pergunta 1&lt;/strong&gt;&lt;/span&gt;
+    &nbsp;
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Substituir aqui pelo texto da pergunta
+  &lt;/p&gt; &lt;!-- PERGUNTA --&gt;
+
+	&lt;!-- REACT TEXT AREA --&gt;
+  &lt;div class="textarea"&gt;&lt;/div&gt;
+	 &lt;div class="collapse-modelo3" style="display: none;"&gt;
+		&lt;p&gt;
+			&lt;span style="color: #ff0000;"&gt;Resposta: &lt;br&gt;&lt;br&gt;
+				xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+			&lt;/span&gt;
+		&lt;/p&gt;
+	&lt;/div&gt;
+  &lt;div class="botao-enviar-gabarito btn-modelo3" style="width: 150px; font-size: 14px;"&gt;
+    Mostrar Gabarito
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- FIM DO CONTEÚDO --&gt;
+        </code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-2">
+    <div class="card-header" id="headingFour">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          MODELO 4 - DRAG AND DROP
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        <pre><code class="language-html">
+&lt;!-- CONTEÚDO --&gt;
+&lt;div class="alerta2" id="alerta-modelo4"style="display: none;"&gt;
+   &lt;p style="font-size: 16pt;"&gt;Faça todas as questões antes de enviar.&lt;/p&gt;
+  &lt;div class="botaoOk" id="botaoOk-modelo4"&gt;Ok&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="gabarito" style="display: none;"&gt;
+ &lt;div class="resposta-certa"&gt;Substituir aqui pela Alternativa 1&lt;/div&gt;
+ &lt;div class="resposta-certa"&gt;Substituir aqui pela Alternativa 2&lt;/div&gt;
+ &lt;div class="resposta-certa"&gt;Substituir aqui pela Alternativa 3&lt;/div&gt;
+ &lt;div class="resposta-certa"&gt;Substituir aqui pela Alternativa 4&lt;/div&gt;
+ &lt;div class="resposta-certa"&gt;Substituir aqui pela Alternativa 5&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="inicio-diferenciados"&gt;
+  &lt;p&gt;Substituir aqui pelo texto da pergunta&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="border-diferenciados"&gt;
+  &lt;div class="gridContainer-modelo4"&gt;
+    &lt;div class="topicos-modelo4"&gt;Substituir aqui pelo texto do primeiro tópico&lt;/div&gt;
+    &lt;div class="dropabble-modelo4"&gt;&lt;/div&gt;
+    &lt;div class="draggable-modelo4"&gt;Substituir aqui pela Alternativa 1&lt;/div&gt;
+
+    &lt;div class="topicos-modelo4"&gt;Substituir aqui pelo texto do segundo tópico&lt;/div&gt;
+    &lt;div class="dropabble-modelo4"&gt;&lt;/div&gt;
+    &lt;div class="draggable-modelo4"&gt;Substituir aqui pela Alternativa 2&lt;/div&gt;
+
+    &lt;div class="topicos-modelo4"&gt;Substituir aqui pelo texto do terceiro tópico&lt;/div&gt;
+    &lt;div class="dropabble-modelo4"&gt;&lt;/div&gt;
+    &lt;div class="draggable-modelo4"&gt;Substituir aqui pela Alternativa 3&lt;/div&gt;
+
+    &lt;div class="topicos-modelo4"&gt;Substituir aqui pelo texto do quarto tópico&lt;/div&gt;
+    &lt;div class="dropabble-modelo4"&gt;&lt;/div&gt;
+    &lt;div class="draggable-modelo4"&gt;Substituir aqui pela Alternativa 4&lt;/div&gt;
+
+    &lt;div class="topicos-modelo4"&gt;Substituir aqui pelo texto do quinto tópico&lt;/div&gt;
+    &lt;div class="dropabble-modelo4"&gt;&lt;/div&gt;
+    &lt;div class="draggable-modelo4"&gt;Substituir aqui pela Alternativa 5&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="gridContainer-button-modelo4"&gt;
+  &lt;div class="botao-enviar-gabarito" id="btn-enviar-modelo4"&gt;Enviar&lt;/div&gt;
+  &lt;div class="botao-enviar-gabarito" id="btn-gabarito-modelo4"&gt;Gabarito&lt;/div&gt;
+  &lt;div class="botao-refazer" id="btn-refazer-modelo4"&gt;Refazer&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- FIM DO CONTEÚDO --&gt;
+        </code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-2">
+    <div class="card-header" id="headingFive">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          MODELO 5 - CLICAR E SELECIONAR
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+      <div class="card-body">
+        <pre><code class="language-html">
+&lt;!-- CONTEÚDO --&gt;
+&lt;div class="alerta2" id="alerta-modelo5" style="display: none;"&gt;
+ &lt;p style="font-size: 16pt;"&gt;Marque ao menos uma alternativa antes de enviar.&lt;/p&gt;
+ &lt;div class="botaoOk" id="botaoOk-modelo5"&gt;Ok&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="inicio-diferenciados" &gt;
+  &lt;p&gt;Substituir aqui pelo texto da pergunta&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="border-diferenciados"&gt;
+  &lt;div class="gridContainer-modelo5"&gt;
+    &lt;div class="gridItem-modelo5" id="box1"&gt;&lt;p&gt;Substituir pela alternativa 1&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="gridItem-modelo5" id="box2"&gt;&lt;p&gt;Substituir pela alternativa 2&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="gridItem-modelo5" id="box3"&gt;&lt;p&gt;Substituir pela alternativa 3&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="gridItem-modelo5" id="box4"&gt;&lt;p&gt;Substituir pela alternativa 4&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="gridItem-modelo5" id="box5"&gt;&lt;p&gt;Substituir pela alternativa 5&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="gridItem-modelo5" id="box6"&gt;&lt;p&gt;Substituir pela alternativa 6&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="gridItem-modelo5" id="box7"&gt;&lt;p&gt;Substituir pela alternativa 7&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="gridItem-modelo5" id="box8"&gt;&lt;p&gt;Substituir pela alternativa 8&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="gridItem-modelo5" id="box9"&gt;&lt;p&gt;Substituir pela alternativa 9&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="gridItem-modelo5" id="box10"&gt;&lt;p&gt;Substituir pela alternativa 10&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="gridItem-modelo5" id="box11"&gt;&lt;p&gt;Substituir pela alternativa 11&lt;/p&gt;&lt;/div&gt;
+    &lt;div class="gridItem-modelo5" id="box12"&gt;&lt;p&gt;Substituir pela alternativa 12&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="gridContainer2-modelo5"&gt;
+  &lt;div id="btn-enviar-model5" class="botao-enviar-gabarito"&gt;Enviar&lt;/div&gt;
+  &lt;div id="btn-recomecar-model5" class="botao-refazer"&gt;Recomeçar&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- FIM DO CONTEÚDO --&gt;
+        </code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-2">
+    <div class="card-header" id="headingSix">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          MODELO 6 - CHECKBOX
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+      <div class="card-body">
+        <pre><code class="language-html">
+&lt;!-- CONTEÚDO --&gt;
+&lt;div class="alerta2" id="alerta-modelo6" style="display: none;"&gt;
+ &lt;p style="font-size: 16pt;"&gt;Marque ao menos uma alternativa antes de enviar.&lt;/p&gt;
+ &lt;div class="botaoOk" id="botaoOk-modelo6"&gt;Ok&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="conteudo-modelo6"&gt;
+  &lt;!-- Pergunta Inicial --&gt;
+
+    &lt;div class="inicio-diferenciados"&gt;
+      &lt;p&gt;Substituir pelo texto da pergunta&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="gridContainer-checkbox"&gt;
+      &lt;div class="caixa-checkbox" id="checkbox1"&gt;&lt;/div&gt;
+      &lt;div style="font-size: 1.18em;" id="alternativa1"&gt;Alternativa 1&lt;/div&gt;
+
+      &lt;div class="caixa-checkbox" id="checkbox2"&gt;&lt;/div&gt;
+      &lt;div style="font-size: 1.18em;" id="alternativa2"&gt;Alternativa 2&lt;/div&gt;
+
+      &lt;div class="caixa-checkbox" id="checkbox3"&gt;&lt;/div&gt;
+      &lt;div style="font-size: 1.18em;" id="alternativa3"&gt;Alternativa 3&lt;/div&gt;
+
+      &lt;div class="caixa-checkbox" id="checkbox4"&gt;&lt;/div&gt;
+      &lt;div style="font-size: 1.18em;" id="alternativa4"&gt;Alternativa 4&lt;/div&gt;
+
+      &lt;div class="caixa-checkbox" id="checkbox5"&gt;&lt;/div&gt;
+      &lt;div style="font-size: 1.18em;" id="alternativa5"&gt;Alternativa 5&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="gridContainer-button-modelo6"&gt;
+  &lt;div class="botao-enviar-gabarito" id="btn-enviar-modelo6"&gt;Enviar&lt;/div&gt;
+  &lt;div class="botao-enviar-gabarito" id="btn-gabarito-modelo6"&gt;Gabarito&lt;/div&gt;
+  &lt;div class="botao-refazer" id="btn-refazer-modelo6"&gt;Refazer&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- FIM DO CONTEÚDO --&gt;
+        </code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-2">
+    <div class="card-header" id="headingSeven">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          MODELO 7 - MÚLTIPLA ESCOLHA
+        </button>
+      </h2>
+    </div>
+    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+      <div class="card-body">
+        <pre><code class="language-html">
+&lt;!-- CONTEUDO --&gt;
+&lt;div class="alerta2" id="alerta-modelo7" style="display: none;"&gt;
+ &lt;p style="font-size: 16pt;"&gt;
+  Marque uma alternativa de cada questão antes de enviar.
+&lt;/p&gt;
+ &lt;div class="botaoOk" id="botaoOk-modelo7"&gt;Ok&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="conteudo-modelo7"&gt;
+
+  &lt;div class="inicio-diferenciados"&gt;
+    &lt;p&gt;Substitua aqui o texto da pergunta&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;ol class="i"&gt;
+    &lt;li&gt;
+      &lt;p style="font-size: 1.5em;"&gt;Substitua aqui o primeiro tópico&lt;/p&gt;
+
+      &lt;div class="gridContainer1-modelo7"&gt;
+        &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+        &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+          Substitua aqui a primeira alternativa
+        &lt;/div&gt;
+
+        &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+        &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+          Substitua aqui a segunda alternativa
+        &lt;/div&gt;
+
+        &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+        &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+          Substitua aqui a terceira alternativa
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+   &lt;/li&gt;&lt;br&gt;&lt;br&gt;
+
+   &lt;li&gt;
+     &lt;p style="font-size: 1.5em;"&gt;Substitua aqui o segundo tópico&lt;/p&gt;
+
+     &lt;div class="gridContainer1-modelo7"&gt;
+       &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+       &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+        Substitua aqui a primeira alternativa
+      &lt;/div&gt;
+
+       &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+       &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+        Substitua aqui a segunda alternativa
+      &lt;/div&gt;
+
+       &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+       &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+        Substitua aqui a terceira alternativa
+      &lt;/div&gt;
+
+     &lt;/div&gt;
+  &lt;/li&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;li&gt;
+    &lt;p style="font-size: 1.5em;"&gt;Substitua aqui o terceiro tópico&lt;/p&gt;
+
+    &lt;div class="gridContainer1-modelo7"&gt;
+      &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+      &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+        Substitua aqui a primeira alternativa
+      &lt;/div&gt;
+
+      &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+      &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+        Substitua aqui a segunda alternativa
+      &lt;/div&gt;
+
+      &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+      &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+        Substitua aqui a terceira alternativa
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+ &lt;/li&gt;&lt;br&gt;&lt;br&gt;
+
+ &lt;li&gt;
+   &lt;p style="font-size: 1.5em;"&gt;Substitua aqui o quarto tópico&lt;/p&gt;
+
+   &lt;div class="gridContainer1-modelo7"&gt;
+     &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+     &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+      Substitua aqui a primeira alternativa
+    &lt;/div&gt;
+
+     &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+     &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+      Substitua aqui a segunda alternativa
+    &lt;/div&gt;
+
+     &lt;div class="caixa-checkbox-modelo7"&gt;&lt;/div&gt;
+     &lt;div style="font-size: 1.15em" class="alternativa-checkbox-modelo7"&gt;
+      Substitua aqui a terceira alternativa
+    &lt;/div&gt;
+
+   &lt;/div&gt;
+&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;div class="gridContainer-button-modelo7"&gt;
+    &lt;div class="botao-enviar-gabarito" id="btn-enviar-modelo7"&gt;Enviar&lt;/div&gt;
+    &lt;div class="botao-refazer" id="btn-refazer-modelo7"&gt;Refazer&lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;!-- FIM DO CONTEÚDO --&gt;
+        </code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="../styles/prism/prism.js"></script>
+  </body>
+</html>

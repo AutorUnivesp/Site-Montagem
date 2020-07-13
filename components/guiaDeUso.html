@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Guia de Uso | Montagem</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="../styles/prism/prism.css">
+    <link rel="stylesheet" href="../styles/home/home.css">
+    <link rel="stylesheet" href="../styles/guiaDeUso/guiaDeUso.css">
+  </head>
+  <body>
+    <!-- INICIO BARRA DE NAVEGAÇÃO -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; z-index: 999; width: 100%; top: 0;">
+  <a class="navbar-brand" href="home.html">Montagem App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-tools"></i>
+          Construtores
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="construtorVideos.html">Construtor Vídeos</a>
+          <a class="dropdown-item" href="paginaInicial.html">Página Inicial</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="PlanilhaVideoaula.html"><i class="fas fa-video"></i> Videoaulas</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="codigos.html"><i class="fas fa-code"></i>
+        Códigos</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="controlePlanilha.html"><i class="fas fa-table"></i> Controle</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="guiaDeUso.html"><i class="fas fa-book"></i> Guia de Uso</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-folder-plus"></i>
+          Mais
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="bannersProfessores.html">Banners / Professores</a>
+          <a class="dropdown-item" href="senhas.html">Senhas</a>
+          <a class="dropdown-item" href="diferenciados.html">Modelos Diferenciados</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <a title="github da montagem" target="_blank" class="icone-nav" href="https://github.com/AutorUnivesp/Montagem"><i class="fab fa-github fa-2x"></i></a>
+      <a title="site to trello" target="_blank" class="icone-nav" href="https://trello.com/"><i class="fab fa-trello fa-2x"></i></a>
+      <a title="google drive" target="_blank" class="icone-nav" href="https://drive.google.com/drive/my-drive"><i class="fab fa-google-drive fa-2x"></i></a>
+      <a title="página de login do Canvas" target="_blank" style="margin-right: 0px;" class="icone-nav" href="https://login.univesp.br/"><i class="fas fa-globe fa-2x"></i></a>
+    </form>
+  </div>
+</nav>
+  <!-- FIM BARRA DE NAVEGAÇÃO -->
+
+  <div class="card-guiaDeUso">
+    <h3 class="ml-3">Seções</h3><br>
+    <p class="ml-3"><a class="itens-guia" href="#apoio">Exercício de apoio</a></p>
+    <p class="ml-3"><a class="itens-guia" href="#avaliacao">Atividade para avaliação</a></p>
+    <p class="ml-3"><a class="itens-guia" href="#forum">Fórum de Dúvidas | Temático</a></p>
+    <p class="ml-3"><a class="itens-guia" href="#importacao">Importação de Conteúdo</a></p>
+    <p class="ml-3"><a class="itens-guia" href="#semana0">Montagem | Semana 0</a></p>
+    <p class="ml-3"><a class="itens-guia" href="#dp">Checklist DP's</a></p>
+    <p class="ml-3"><a class="itens-guia" href="#inserindo">inserindo</a></p>
+    <p class="ml-3"><a class="itens-guia" href="#classes">Classes</a></p>
+    <p class="ml-3"><a class="itens-guia" href="#diferenciados">Diferenciados</a></p>
+  </div>
+
+  <div class="grid-guiaDeUso">
+
+    <div></div>
+
+    <div class="content-guiaDeUso">
+
+      <div class="itens-content" id="apoio">
+        <p><a>Exercício de apoio | Teste</a>
+          Quando um Exercício de apoio for montado como teste, além do código HTML e do conteúdo da atividade, deve-se seguir a seguinte configuração:
+
+          <div class="card-itens">
+            <ol><br>
+              <li>Tipo de Questionário: "Praticar Teste"</li><br>
+              <li>Desmarcar a opção “Embaralhar as Respostas”</li><br>
+              <li>Marcar a opção "Permitir Várias Tentativas" além de marcar as opções “Deixar alunos ver suas resposta de questionário (perguntas incorretas serão marcadas no feedback do aluno)” e “Permitir que os alunos vejam as respostas corretas”</li><br>
+              <li>Se atentar à pontuação: Exercícios de apoio NÃO valem nota.</li><br>
+              <li>Se atentar à data. Exercícios de apoio Não tem data de vencimento.</li><br>
+              <li>Não se esqueça de sempre salvar as atividades após as alterações.</li><br>
+            </ol>
+          </div>
+
+          <br>
+
+          <a>Exercício de apoio | Página de Conteúdo</a>
+
+          <p>Quando um Exercício de apoio for montado como Página de conteúdo se atentar na formatação (Seguir padrão do HTML) e sempre que possível inserir a numeração das questões através do HTML utilizando as listas Ordenadas &lt;ol&gt; (Para Números “1, 2,3...”) &lt;ol class=”a”&gt; (Para numeração em letras “a, b, c...”) e &lt;ol class”i”&gt; (Para números romanos “I, II, III...”. Para listas não ordenadas &lt;ul&gt; (Para Bullet). <strong>Obs: Não se esqueça de sempre mudar o nome da disciplina, o número da semana e o tema da semana nos locais indicados no código HTML.</strong> Tais informações se econtram na página inicial de cada disciplina.</p>
+        </p>
+      </div>
+
+      <hr>
+      <br><br>
+
+      <div class="itens-content" id="avaliacao">
+        <p><a>Atividade para Avaliação | Ferramenta Teste</a>
+          <p>Quando uma atividade para avaliação for montada como teste, além do código HTML e do conteúdo da atividade, deve-se seguir a seguinte configuração:</p>
+
+          <div class="card-itens">
+            <ol><br>
+              <li>(Padrão Univesp é 10 pontos)</li><br>
+              <li>Marcar a opção "Embaralhar as respostas"</li><br>
+              <li>Marcar a opção "Permitir Várias Tentativas"</li><br>
+              <li>Marcar a opção "Tentativas Permitidas" e preencher a caixa que tem em seguida com o número “3”.</li><br>
+              <li>Desmarcar a opção "Deixar alunos ver suas resposta de questionário (perguntas incorretas serão marcadas no feedback do aluno)"</li><br>
+              <li>Inserir as Datas de Abertura e vencimento da Atividade que podem ser conferidas na Planilha de Controle da Montagem.</li><br>
+              <li>Se atentar a pontuação de cada questão.</li><br>
+              <li>Não deixar comentários em nenhuma questão.</li><br>
+              <li>Verificar Layout das questões e garantir que nenhuma fique ilegível.</li><br>
+              <li>Colocar o número de cada pergunta. Ex: Pergunta 1, Pergunta 2...</li><br>
+              <li>O Gabarito deve ser montado em HTML e adicionado ao drive Gabaritos AVA.</li><br>
+            </ol>
+          </div>
+
+          <br>
+
+          <a>Atividade para Avaliação | Ferramenta Atividade</a>
+
+          <p>Quando uma atividade para avaliação for montada como ATIVIDADE, além do código HTML e do conteúdo da atividade, deve-se seguir a seguinte configuração:</p>
+
+          <div class="card-itens">
+            <ol><br>
+              <li>Pontuação nas configurações e em cada questão.(Padrão Univesp é 10 pontos)</li><br>
+              <li>Inserir as Datas de Abertura e vencimento da Atividade que podem ser conferidas na Planilha de Controle da Montagem.</li><br>
+              <li>Inserir tipo de envio "Online" e marcar as seguintes opções "Uploads do arquivo" "Restringir tipos de arquivo de upload" e inserir "PDF" na caixinha.</li><br>
+              <li>Verificar Layout das questões e garantir que nenhuma fique ilegível.</li><br>
+              <li>O Gabarito deve ser montado em HTML e adicionado ao drive Gabaritos AVA.</li><br>
+            </ol>
+          </div>
+        </p>
+      </div>
+
+      <hr>
+      <br><br>
+
+      <div class="itens-content" id="forum">
+        <p><a>Fórum de Dúvidas | Fórum Temático</a>
+          <p>Marca as seguintes opções:</p>
+
+          <div class="card-itens">
+            <ol><br>
+              <li>Permitir respostas ligadas</li><br>
+              <li>Permitir curtidas</li><br>
+              <li>Classificar por curtidas</li><br>
+              <li>Esse é um fórum de grupo e inserir o Grupo.</li><br>
+              <li>Salvar as alterações.</li><br>
+            </ol>
+          </div>
+        </p>
+      </div>
+
+      <hr>
+      <br><br>
+
+      <div class="itens-content" id="importacao">
+        <p><a>Importação de Conteúdo | Semana 0 – Disciplinas Novas</a>
+
+          <div class="card-itens">
+            <ol><br>
+              <li>Buscar a disciplina pelo código.</li><br>
+              <li>Clicar na sala criada.</li><br>
+              <li>Selecionar “Adicionar Conteúdo Existente”.</li><br>
+              <li>Tipo de Conteúdo: Selecione “Copiar um Curso do Canvas”.</li><br>
+              <li>Pesquisar um Curso: Digite “Modelo” e escolha a opção “Modelo para Importação – Curso Novo”.</li><br>
+              <li>Conteúdo: Marque a opção “Todo conteúdo”.</li><br>
+              <li>Clique em “Importar”.</li><br>
+              <li>Por fim, faça as alterações necessárias. “Ver Montagem | Semana 0 – Disciplinas Novas”.</li><br>
+            </ol>
+          </div>
+
+          <br>
+
+          <a>Importação de Conteúdo | Semana 0 – Reoferta</a>
+
+          <div class="card-itens">
+            <ol><br>
+              <li>Buscar a disciplina pelo código.</li><br>
+              <li>Clicar na sala criada.</li><br>
+              <li>Selecionar “Adicionar Conteúdo Existente”.</li><br>
+              <li>Tipo de Conteúdo: Selecione “Copiar um Curso do Canvas”.</li><br>
+              <li>Pesquisar um Curso: Copiar o código ID do SIS da última oferta e colar nesse campo. Não esqueça de clicar no curso.</li><br>
+              <li>Conteúdo: Marque a opção “Todo conteúdo”.</li><br>
+              <li>Clique em “Importar”.</li><br>
+              <li>Por fim, faça as alterações necessárias. “Ver Montagem | Semana 0 – Disciplinas Novas”.</li><br>
+            </ol>
+          </div>
+
+        </p>
+      </div>
+
+      <hr>
+      <br><br>
+
+      <div class="itens-content" id="semana0">
+        <p><a>Montagem | Semana 0 - Disciplinas Novas</a>
+
+          <div class="card-itens">
+            <ol><br>
+              <li>Página Inicial (Código HTML).</li><br>
+              <li>Página Cabeçalho (definir se o modelo é Antigo, Clássico ou Sona). Ver código HTML.</li><br>
+              <li>Redefinir as datas de abertura dos módulos.</li><br>
+            </ol>
+          </div>
+
+          <br>
+
+          <a>Montagem | Semana 0 - Reoferta (Parte 1)</a>
+
+          <div class="card-itens">
+            <ol><br>
+              <li>Adicionar Fórum em todas as semanas e deixar configurado de forma correta (Caso não tenha fórum)*.</li><br>
+              <li>Despublicar módulos.</li><br>
+              <li>Converter as Atividades para avaliação em Exercícios de Apoio (teste).</li><br>
+              <li>Todos os exercícios como PDF devem ser convertidos em HTML.</li><br>
+              <li>Página gabaritos, remover o links, deixar apenas o cabeçalho.</li><br>
+              <li>Verificar se existem gabaritos na aba "todas as páginas". Caso existam, deixar página em branco.</li><br>
+              <li>Mudar número do curso nos Aplicativos dentro da aba “Configurações”.</li><br>
+              <li>Corrigir Página inicial (Não deixar módulo, mas a página do curso mesmo e ajustar o que for necessário).</li><br>
+              <li>Slide: Deixar nome Slide da Videoaula X e aumentar recuo.</li><br>
+              <li>Inserir botão de Download das videoaulas e dos Slides com os ícones. <br> Código:</li>
+            </ol>
+          </div>
+          <div style="width: 90%;">
+<pre><code class="language-html">
+&lt;!-- Slides: --&gt;
+
+&lt;a class="btn btn-padrao icon-educators" href="xxxxxxxxxxxx"&gt;
+Slides de Apoio
+&lt;/a&gt;
+
+&lt;!-- Download: --&gt;
+
+&lt;a class="btn btn-padrao icon-cloud-download"
+href="https://drive.google.com/uc?export=download&id=xxxxxxxxxxxxx"&gt;
+Download do Video
+&lt;/a&gt;
+</code></pre>
+          </div>
+
+          <br>
+
+          <a>Montagem | Semana 0 - Reoferta (Parte 2)</a>
+
+          <div class="card-itens">
+            <ol><br>
+              <li>Remover requisito dos módulos (Conforme necessidade) e adicionar data para desbloqueio (verificar datas na planilha de controle da Montagem).</li><br>
+              <li>Remover módulo Download.</li><br>
+              <li>Organizar semanas 7....1.</li><br>
+              <li>Arrumar página cabeçalho caso seja necessário.</li><br>
+              <li>Vídeos como fóruns devem ser convertidos em páginas.</li><br>
+              <li>Inserir curso na subconta correta (Caso necessário).</li><br>
+              <li>Verificar se o curso tem: Orientações Gerais, Projeto Pedagógico e Normas Acadêmicas.</li><br>
+              <li>Por fim gerar páginas iniciais novamente.</li><br>
+            </ol>
+          </div>
+
+        </p>
+      </div>
+
+      <hr>
+      <br><br>
+
+      <div class="itens-content" id="dp">
+
+        <p><a>Checklist DP’s</a>
+
+          <p>Roteiro para Montagem das disciplinas de DPs no Espaço de Trabalho: (importante: Arrumar no espaço de trabalho antes de importar)</p>
+
+          <div class="card-itens">
+            <ol><br>
+              <li>Em "Configurações" na aba "Aplicativos", remover (se houver):
+                <ul>
+                  <li>Orientações Gerais...</li>
+                  <li>Plano de Ensino</li>
+                  <li>Gabaritos</li>
+                  <li>Plano de videoaulas</li>
+                </ul>
+              </li><br>
+              <li>Configurar o Menu de Navegação com os seguintes itens:
+                <ul>
+                  <li>Página Inicial</li>
+                  <li>Avisos</li>
+                  <li>Módulos</li>
+                  <li>Notas</li>
+                  <li>Cursos Antigos</li>
+                  <li>Normas Acadêmicas</li>
+                </ul>
+              </li><br>
+              <li>Verificar se há avisos na disciplina e removê-los (Menu avisos).</li><br>
+              <li>Colocar "Módulos" como página inicial do curso.</li><br>
+              <li>Criar um Módulo para download das videoaulas (se não houver). Colocar uma página "Download das videoaulas". Verificar se já existe a página de download das videoaulas e usar o link dela para atualizar o código HTML:
+                <ul>
+                  <li>&lt;p&gt;&lt;a class="btn btn-padrao icon-cloud-download" href="xxxxxxxxxxxx" target="_blank"&gt;Download dos Vídeos&lt;/a&gt;&lt;/p&gt;.</li>
+                  <li>Se não houver, precisamos criá-la. Nos cursos mais antigos, as videoaulas estão em outra conta que não é a do Autor, então será preciso analisar cada caso.</li>
+                </ul>
+              </li><br>
+              <li>Nos Módulos:
+                <ul>
+                  <li>Remover a data de abertura.</li>
+                  <li>Em Requisitos, clicar em "Aluno deve completar um desses requisitos" em seguida selecionar "Semana X" e "exibir o item" (normalmente são defaut).</li>
+                  <li>Remover o item "Organização Didática" se tiver.</li>
+                  <li>Checar a formatação dos nomes dos itens do módulo e mantê-lo no padrão (Texto-base, Texto de apoio, Material de apoio etc.)</li>
+                  <li>Verificar se há fóruns de dúvidas e removê-los</li>
+                  <li>Remover também os fóruns temáticos.</li>
+                  <li>Verificar se há vídeos ou videoaulas criados como fórum, se houver montá-los como página e remover o fórum (Se forem muitos vídeos de apoio ou base inviabilizando a montagem como página, bloquear os fóruns para comentários, porém esse bloqueio não vai na importação então será necessário fazer o bloqueio novamente na nova disciplina. Convém verificar o que dá menos trabalho).</li>
+                  <li>Testar se os links dos materiais didáticos estão funcionando.</li>
+                  <li>Verificar se não há links montados como páginas (Páginas com nome texto-base ou apoio onde há apenas um link). Neste caso, eliminar a página e montar o item como URL externa.</li>
+                  <li>Verificar se há teste com envio de arquivo e transformá-los em páginas.</li>
+                  <li>Todos os exercícios de apoio deverão ter gabarito ou feedback, caso contrário, devem ser removidos.</li>
+                  <li>Atividade para avaliação deve ser convertida em exercícios de apoio.</li>
+                </ul>
+              </li><br>
+              <li>Em Atividades, manter apenas "NotaAvaliaçãoPresencial", eliminar todas as outras se houver. Obs: Conforme citado acima as atividades avaliativas serão transformadas em apoio.</li><br>
+              <li>Gerar a página de cada semana dos módulos (Semana 1... Semana 7).</li><br>
+              <li>Conferir se as páginas Semana X possuem todos os itens de seu respectivo módulo.</li><br>
+              <li>Modificar linguagem, quando estiver “Olá, alun@!”, mudar para “Olá, alunos e alunas!”.</li><br>
+            </ol>
+          </div>
+
+        </p>
+
+      </div>
+
+      <hr>
+      <br><br>
+
+      <div class="itens-content" id="inserindo">
+        <p><a>Inserindo um Input</a></p>
+          <p>Para inserir um input, coloque a class “inputfield” na div que você deseja usar como input. Não há a necessidade de inserir nada dentro da div.</p>
+          <div style="width: 90%;">
+<pre><code class="language-html">
+&lt;div class=”inputfield”&gt;&lt;/div&gt;
+</code></pre>
+          </div>
+
+          <br><br>
+
+          <a>Inserindo um Textarea</a>
+          <p>Para inserir um textarea, coloque a class “textarea” na div que você deseja usar como textarea. Não há a necessidade de inserir nada dentro da div.</p>
+          <div style="width: 90%;">
+<pre><code class="language-html">
+&lt;div class=”textarea”&gt;&lt;/div&gt;
+</code></pre>
+          </div>
+
+          <br><br>
+
+          <a>Inserindo um Audio</a>
+          <p>Para inserir um audio, coloque a class “insertAudio” na tag “a” que você deseja usar como audio. Além disso, passe o caminho do audio no href da tag “a”</p>
+          <div style="width: 90%;">
+<pre><code class="language-html">
+ &lt;a class=”insertAudio” href="xxxxxxxxxxxxxxxxxxxxxxx"&gt;&lt;/div&gt;
+</code></pre>
+          </div>
+
+          <br><br>
+
+          <a>Inserindo um botao Imprimir</a>
+          <p>Para inserir um botão de imprimir, coloque a id “imprimir” na tag “div” que você deseja usar como botão de imprimir.</p>
+          <div style="width: 90%;">
+<pre><code class="language-html">
+  &lt;div id="imprimir" style="width: 60px;"&gt;Imprimir&lt;/div&gt;
+</code></pre>
+          </div>
+
+      </div>
+
+      <hr>
+      <br><br>
+
+      <div class="itens-content" id="classes">
+        <a>Classe “Menu-Semanas”</a>
+        <p>Quando for criar o menu das semanas da disciplina, colocar na div container a classe “menu-semanas”. Isso permite a identificação da página inicial pelo Javascript.</p>
+        <div style="width: 90%;">
+<pre><code class="language-html">
+&lt;div class=”container menu-semanas”&gt;&lt;/div&gt;
+</code></pre>
+        </div>
+
+        <br><br>
+
+        <a>Classe “Semanal”</a>
+        <p>Quando for criar o menu das semanas da disciplina, colocar na div container a classe “semanal”. Isso permite a identificação do desbloqueio das semanas como sendo a cada 7 dias pelo Javascript.</p>
+        <div style="width: 90%;">
+<pre><code class="language-html">
+&lt;div class=”container menu-semanas semanal”&gt;&lt;/div&gt;
+</code></pre>
+        </div>
+
+        <br><br>
+
+        <a>Classe “Quinzenal”</a>
+        <p>Quando for criar o menu das semanas da disciplina, colocar na div container a classe “quinzenal”. Isso permite a identificação do desbloqueio das semanas como sendo a cada 15 dias pelo Javascript.</p>
+        <div style="width: 90%;">
+<pre><code class="language-html">
+&lt;div class=”container menu-semanas quinzenal”&gt;&lt;/div&gt;
+</code></pre>
+        </div>
+
+        <br><br>
+
+        <a>Classe “Certa” - Diferenciados</a>
+        <p>Quando for criar um exercício diferenciado que contenha alternativas, por favor inserir a classe “certa” nas respostas. Isso permite a identificação das respostas corretas pelo Javascript. As substituições dos textos dos modelos DEVEM SER feitas no editor de HTML do canvas.</p>
+      </div>
+
+      <hr>
+      <br><br>
+
+      <div class="itens-content" id="diferenciados">
+        <a>Modelo 1 – Seleciona a Certa</a>
+        <div style="width: 90%;">
+<pre><code class="language-html">
+Resposta certa...
+
+&lt;div id=”1_a” class=”btn-challenge certa”&gt;Alternativa 1&lt;/div&gt;
+
+Resposta errada...
+
+&lt;div id=”1_b” class=”btn-challenge”&gt;Alternativa 2&lt;/div&gt;
+</code></pre>
+        </div>
+
+        <br><br>
+
+        <a>Modelo 5 – Clicar e Selecionar</a>
+        <p>O modelo 5 “Clicar e Selecionar” aceita somente 3 tamanhos de exercício: com 6 alternativas (podendo ter até 3 corretas), com 9 alternativas (podendo ter até 4 corretas) ou com 12 alternativas (podendo ter até 5 corretas). O modelo padrão (HTML que está no github) é o que contém 12 alternativas. Caso queira um modelo com 6 alternativas – retirar as 6 últimas divs. Caso queira um com 9 alternativas – retirar as 3 últimas divs. Isso se faz necessário, pois qualquer outro número de alternativas (por exemplo, 8, 10, etc.) fará com que o JavaScript não funcione corretamente.</p>
+        <div style="width: 90%;">
+<pre><code class="language-html">
+Resposta certa...
+
+&lt;div class=”gridItem-modelo5 certa” id=”box1”&gt;Alternativa 1&lt;/div&gt;
+
+Resposta errada...
+
+&lt;div class=”gridItem-modelo5” id=”box2”&gt;Alternativa 2&lt;/div&gt;
+
+Exemplo de div a ser retirada (caso queira menos questões):
+
+&lt;div class=”gridItem-modelo5” id=”box12”&gt;Alternativa 12&lt;/div&gt;
+</code></pre>
+        </div>
+
+        <br><br>
+
+        <a>Modelo 6 – Clicar e Selecionar</a>
+        <div style="width: 90%;">
+<pre><code class="language-html">
+Resposta certa...
+
+&lt;div class=”caixa-checkbox certa” id=”checkbox1”&gt;&lt;/div&gt;
+
+Resposta errada...
+
+&lt;div class=”caixa-checkbox” id=”checkbox2”&gt;&lt;/div&gt;
+</code></pre>
+        </div>
+
+        <br><br>
+
+        <a>Modelo 7 – Múltipla Escolha</a>
+        <div style="width: 90%;">
+<pre><code class="language-html">
+&lt;div class=”gridContainer1-modelo7”&gt;
+
+  Resposta certa...
+
+  &lt;div class=”caixa-checkbox-modelo7 certa”&gt;Alternativa 1&lt;/div&gt;
+
+  Respostas erradas...
+  &lt;div class=” caixa-checkbox-modelo7”&gt;Alternativa 2&lt;/div&gt;
+  &lt;div class=” caixa-checkbox-modelo7”&gt;Alternativa 3&lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+        </div>
+        <br>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="../styles/prism/prism.js"></script>
+  </body>
+</html>

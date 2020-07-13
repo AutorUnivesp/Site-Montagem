@@ -1,0 +1,63 @@
+.grid-guiaDeUso{
+  display: grid;
+  grid-template-columns: 20% 70%;
+  grid-column-gap: 10%;
+}
+
+.card-guiaDeUso{
+  width: 20%;
+  background-color: #Af1c26;
+  margin-top: 8%;
+  color: white;
+  height: 420px;
+  border-radius: 5px;
+  margin-left: 2%;
+  position: fixed;
+}
+
+.content-guiaDeUso{
+  margin-top: 10%;
+  max-width: 90%;
+}
+
+.itens-guia{
+  color: white;
+}
+.itens-guia:hover{
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-shadow: 1px 1px black;
+  text-decoration: none;
+  color: white;
+}
+
+.content-guiaDeUso a{
+  text-decoration: none;
+  pointer-events: none;
+  color: black;
+  font-weight: bold;
+  font-size: 2em;
+  display: block;
+  color: #565e69;
+  text-shadow: 0.5px 0.5px black;
+}
+
+.card-itens{
+  background-color: #8996a9;
+  color: white;
+  border-radius: 7px;
+  width: 90%;
+  box-shadow: 5px 5px 5px #565e69;
+}
+
+hr{
+  color: #383c42;
+  background-color: #383c42;
+  height: 10px;
+  margin-top: 5%;
+}
+
+.itens-content{
+  min-height:100%;
+}

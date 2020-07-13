@@ -1,0 +1,40 @@
+.submit-lente {
+  position:absolute;
+  top:0; right: 0;
+  z-index:10;
+  border:none;
+  background:transparent;
+  outline:none;
+  pointer-events: none;
+}
+
+.submit-line {
+  position: relative;
+  width: 250px;
+}
+
+.submit-line input {
+  width: 100%;
+}
+
+.grid-codigos{
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  margin-top: 15%;
+  margin-left: 10%;
+}
+
+input{
+  background-color: #565e69;
+  color: white;
+}
+
+.fa-search{
+  color: white;
+}
+
+::placeholder{
+  color: white;
+  font-style: italic;
+  font-weight: lighter;
+}

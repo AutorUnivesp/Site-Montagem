@@ -1,0 +1,54 @@
+.bg-light{
+  background-color: #AF1C26 !important;
+}
+
+.nav-link, .navbar-brand{
+  color: white !important;
+}
+.nav-link:hover, .icone-nav:hover{
+  color: #00d3cc !important;
+}
+
+.icone-nav{
+  margin-right: 18px;
+  color: white;
+}
+
+.dropdown-item:hover{
+  background-color: #565e69 !important;
+  color: white !important;
+}
+
+.card{
+  margin-left: auto;
+  margin-right: auto;
+  // margin-top: 7%;
+  border: 2px solid #AF1C26 !important;
+}
+
+.card-body h1{
+  text-align: center;
+  color: #AF1C26 !important;
+  font-size: 3.5em !important;
+}
+
+.img-home{
+  width: 27%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botao-home{
+  background-color: #AF1C26 !important;
+  width: 30%;
+  &:hover{
+    background-color: #565e69 !important;
+  }
+}
+
+.div-logo-univesp{
+  margin-top: 4.5%;
+}
+.logo-univesp{
+  width: 10%;
+}
