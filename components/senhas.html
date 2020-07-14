@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="../styles/home/home.css">
     <link rel="stylesheet" href="../styles/senhas/senhas.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- INICIO BARRA DE NAVEGAÇÃO -->
@@ -77,12 +79,12 @@
 
         <p><strong>Login:</strong>
           <span id="copy1">montagem.ava@univesp.br</span>
-          <span class="badge badge-light" id="copy-1">Copy</span>
+          <span class="badge badge-light copy" data-copy="copy1">Copy</span>
         </p>
 
         <p><strong>Senha:</strong>
           <span id="copy2">#TheBestTeam!</span>
-          <span class="badge badge-light" id="copy-2">Copy</span>
+          <span class="badge badge-light copy" data-copy="copy2">Copy</span>
         </p>
       </div>
 
@@ -93,12 +95,12 @@
 
         <p><strong>Login:</strong>
           <span id="copy3">AutorUnivesp</span>
-          <span class="badge badge-light" id="copy-3">Copy</span>
+          <span class="badge badge-light copy" data-copy="copy3">Copy</span>
         </p>
 
         <p><strong>Senha:</strong>
           <span id="copy4">materialdidatic0!</span>
-          <span class="badge badge-light" id="copy-4">Copy</span>
+          <span class="badge badge-light copy" data-copy="copy4">Copy</span>
         </p>
       </div>
 
@@ -109,12 +111,12 @@
 
         <p><strong>Login:</strong>
           <span id="copy5">gabaritos.ava@univesp.br</span>
-          <span class="badge badge-light" id="copy-5">Copy</span>
+          <span class="badge badge-light copy" data-copy="copy5">Copy</span>
         </p>
 
         <p><strong>Senha:</strong>
           <span id="copy6">#Gaba@4159#!</span>
-          <span class="badge badge-light" id="copy-6">Copy</span>
+          <span class="badge badge-light copy" data-copy="copy6">Copy</span>
         </p>
       </div>
 
@@ -125,12 +127,12 @@
 
         <p><strong>Login:</strong>
           <span id="copy7">autor@univesp.br</span>
-          <span class="badge badge-light" id="copy-7">Copy</span>
+          <span class="badge badge-light copy" data-copy="copy7">Copy</span>
         </p>
 
         <p><strong>Senha:</strong>
           <span id="copy8">66SocorroUnivesp!</span>
-          <span class="badge badge-light" id="copy-8">Copy</span>
+          <span class="badge badge-light copy" data-copy="copy8">Copy</span>
         </p>
       </div>
 
@@ -141,12 +143,12 @@
 
         <p><strong>Login:</strong>
           <span id="copy9">1000001@aluno.univesp.br</span>
-          <span class="badge badge-light" id="copy-9">Copy</span>
+          <span class="badge badge-light copy" data-copy="copy9">Copy</span>
         </p>
 
         <p><strong>Senha:</strong>
           <span id="copy10">@luno_teste2020</span>
-          <span class="badge badge-light" id="copy-10">Copy</span>
+          <span class="badge badge-light copy" data-copy="copy10">Copy</span>
         </p>
       </div>
     </div>
@@ -154,5 +156,26 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <script>
+
+  let copy = document.getElementsByClassName("copy");
+
+for (var i = 0; i < copy.length; i++) {
+ copy[i].addEventListener("click", copiarSenhas);
+}
+
+function copiarSenhas(){
+  console.log(copyText)
+  var copyText = this.dataset.copy;
+  var textArea = document.createElement("textarea");
+  textArea.value = document.getElementById(copyText).textContent;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("Copy");
+  textArea.remove();
+}
+
+  </script>
   </body>
 </html>
