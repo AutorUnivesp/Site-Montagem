@@ -160,7 +160,7 @@
       <p>Coloque os dados corretamente para gerar.</p>
 
       <h5>Modelo:</h5>
-      <select style="width: 25%;" class="" name="">
+      <select style="width: 25%;" class="" name="" id="modeloField">
         <option disabled selected value="">Indique o Modelo</option>
         <option value="Antigo">Antigo</option>
         <option value="Clássico">Clássico</option>
@@ -172,13 +172,13 @@
       <h5>Topo da Página</h5>
 
       <div class="grid-topoPagina">
-        <div><span>Curso:* <br> <input type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
+        <div><span>Curso:* <br> <input id="curseField" type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
 
-        <div><span>Disciplina:* <br> <input type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
+        <div><span>Disciplina:* <br> <input id="disciplinaName" type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
 
-        <div><span>Banner:* <br> <input type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
+        <div><span>Banner:* <br> <input id="bannerField" type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
 
-        <div><span>Plano de Ensino:* <br> <input type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
+        <div><span>Plano de Ensino:* <br> <input id="planoField" type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
       </div>
 
       <br>
@@ -186,9 +186,9 @@
       <h5>Vídeo de Apresentação</h5>
 
       <div class="grid-videoApresentacao">
-        <div><input type="text" placeholder="Insira o link do vídeo"></div>
+        <div><input id="videoLink" type="text" placeholder="Insira o link do vídeo"></div>
 
-        <div><input type="text" placeholder="Insira o link do download"></div>
+        <div><input id="downloadLink" type="text" placeholder="Insira o link do download"></div>
       </div>
 
       <br>
@@ -207,9 +207,9 @@
 
         <div><span>Horas/Semana: <br> <input id="horaSemana" type="text"></span></div>
 
-        <div><span>Data da Prova: <br> <input style="width: 110%;" type="date"></span></div>
+        <div><span>Data da Prova: <br> <input id="dataProva" style="width: 110%;" type="date"></span></div>
 
-        <div id="dataProva2" style="display: none;"><span>Data da Prova: <br> <input style="width: 110%;" type="date"></span></div>
+        <div id="dataProva2" style="display: none;"><span>Data da Prova: <br> <input id="dataProva1" style="width: 110%;" type="date"></span></div>
       </div><br>
 
       <div> <button id="botaoProva2" type="button" name="button">Adicionar Data</button> </div>
@@ -219,16 +219,16 @@
       <h5>Formador(a)</h5>
 
       <div class="grid-formador">
-        <div><span>Nome:* <br> <input type="text" placeholder="Escreva um espaço em branco se não houver"> </span></div>
+        <div><span>Nome:* <br> <input id="professorName" type="text" placeholder="Escreva um espaço em branco se não houver"> </span></div>
 
-        <div><span>Foto:* <br> <input type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
+        <div><span>Foto:* <br> <input id="professorFoto" type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
 
-        <div><span>Currículo:* <br> <input type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
+        <div><span>Currículo:* <br> <input id="curriculoField" type="text" placeholder="Escreva um espaço em branco se não houver"></span></div>
       </div><br><br>
 
       <div> <button id="botaoResumo" type="button" name="button"> Adicionar Resumo Visual</button> </div> <br>
 
-      <div id="resumoVisual" style="display: none;"><span><input type="text" placeholder="Insira o link do resumo visual"></span></div>
+      <div id="resumoVisual" style="display: none;"><span><input id="resumoVisual1" type="text" placeholder="Insira o link do resumo visual"></span></div>
 
     </div>
 
@@ -243,8 +243,8 @@
 
       <div class="temas-construtor">
         <div> <input id="data-semana1" type="date" name="" value=""> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o tema da semana 1"> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o link da semana 1"> </div>
+        <div> <input id="tema-semana1" type="text" name="" value="" placeholder="Insira o tema da semana 1"> </div>
+        <div> <input id="link-semana1" type="text" name="" value="" placeholder="Insira o link da semana 1"> </div>
       </div>
 
       <br>
@@ -253,8 +253,8 @@
 
       <div class="temas-construtor">
         <div> <input id="data-semana2" type="date" name="" value=""> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o tema da semana 2"> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o link da semana 2"> </div>
+        <div> <input id="tema-semana2" type="text" name="" value="" placeholder="Insira o tema da semana 2"> </div>
+        <div> <input id="link-semana2" type="text" name="" value="" placeholder="Insira o link da semana 2"> </div>
       </div>
 
       <br>
@@ -263,8 +263,8 @@
 
       <div class="temas-construtor">
         <div> <input id="data-semana3" type="date" name="" value=""> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o tema da semana 3"> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o link da semana 3"> </div>
+        <div> <input id="tema-semana3" type="text" name="" value="" placeholder="Insira o tema da semana 3"> </div>
+        <div> <input id="link-semana3" type="text" name="" value="" placeholder="Insira o link da semana 3"> </div>
       </div>
 
       <br>
@@ -273,8 +273,8 @@
 
       <div class="temas-construtor">
         <div> <input id="data-semana4" type="date" name="" value=""> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o tema da semana 4"> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o link da semana 4"> </div>
+        <div> <input id="tema-semana4" type="text" name="" value="" placeholder="Insira o tema da semana 4"> </div>
+        <div> <input id="link-semana4" type="text" name="" value="" placeholder="Insira o link da semana 4"> </div>
       </div>
 
       <br>
@@ -283,8 +283,8 @@
 
       <div class="temas-construtor">
         <div> <input id="data-semana5" type="date" name="" value=""> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o tema da semana 5"> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o link da semana 5"> </div>
+        <div> <input id="tema-semana5" type="text" name="" value="" placeholder="Insira o tema da semana 5"> </div>
+        <div> <input id="link-semana5" type="text" name="" value="" placeholder="Insira o link da semana 5"> </div>
       </div>
 
       <br>
@@ -293,8 +293,8 @@
 
       <div class="temas-construtor">
         <div> <input id="data-semana6" type="date" name="" value=""> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o tema da semana 6"> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o link da semana 6"> </div>
+        <div> <input id="tema-semana6" type="text" name="" value="" placeholder="Insira o tema da semana 6"> </div>
+        <div> <input id="link-semana6" type="text" name="" value="" placeholder="Insira o link da semana 6"> </div>
       </div>
 
       <br>
@@ -303,8 +303,8 @@
 
       <div class="temas-construtor">
         <div> <input id="data-semana7" type="date" name="" value=""> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o tema da semana 7"> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o link da semana 7"> </div>
+        <div> <input id="tema-semana7" type="text" name="" value="" placeholder="Insira o tema da semana 7"> </div>
+        <div> <input id="link-semana7" type="text" name="" value="" placeholder="Insira o link da semana 7"> </div>
       </div>
 
       <br>
@@ -313,16 +313,16 @@
 
       <div class="temas-construtor">
         <div> <input id="data-semana8" type="date" name="" value=""> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o tema da semana 8"> </div>
-        <div> <input type="text" name="" value="" placeholder="Insira o link da semana 8"> </div>
+        <div> <input id="tema-semana8" type="text" name="" value="" placeholder="Insira o tema da semana 8"> </div>
+        <div> <input id="link-semana8" type="text" name="" value="" placeholder="Insira o link da semana 8"> </div>
       </div>
 
       <br><br>
 
       <div class="grid-botoes-final">
-        <div><button type="button">GERAR</button></div>
-        <div><button type="button">CABEÇALHO</button></div>
-        <div><button type="button">LIMPAR</button></div>
+        <div><button type="button" onclick="montaPaginaInicial()">GERAR</button></div>
+        <div><button type="button" onclick="montaCabecalho()">CABEÇALHO</button></div>
+        <div><button type="button" onclick="limpar()">LIMPAR</button></div>
       </div>
 
       <br>
@@ -330,8 +330,10 @@
     </div>
 
   </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="../script/limpa.js"></script>
+  <script src="../script/montaPaginaInicial.js"></script>
+  <script src="../script/montaCabecalho.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -364,7 +366,7 @@
         let sem5 = document.getElementById('data-semana5').value
         let sem6 = document.getElementById('data-semana6').value
         let sem7 = document.getElementById('data-semana7').value
-        let sem8 = document.getElementById('data-semana8').value
+        //let sem8 = document.getElementById('data-semana8').value
 
         var res1 = sem1.replace("", "2020-08-03");
         document.getElementById("data-semana1").value = res1;
@@ -387,8 +389,8 @@
         var res7 = sem7.replace("", "2020-09-14");
         document.getElementById("data-semana7").value = res7;
 
-        var res8 = sem8.replace("", "2020-09-21");
-        document.getElementById("data-semana8").value = res8;
+       // var res8 = sem8.replace("", "2020-09-21");
+        //document.getElementById("data-semana8").value = res8;
       })
     }
 
@@ -401,7 +403,7 @@
         let sem5 = document.getElementById('data-semana5').value
         let sem6 = document.getElementById('data-semana6').value
         let sem7 = document.getElementById('data-semana7').value
-        let sem8 = document.getElementById('data-semana8').value
+       //let sem8 = document.getElementById('data-semana8').value
 
         var res1 = sem1.replace("", "2020-08-03");
         document.getElementById("data-semana1").value = res1;
@@ -424,8 +426,8 @@
         var res7 = sem7.replace("", "2020-10-26");
         document.getElementById("data-semana7").value = res7;
 
-        var res8 = sem8.replace("", "2020-11-09");
-        document.getElementById("data-semana8").value = res8;
+        //var res8 = sem8.replace("", "2020-11-09");
+        //document.getElementById("data-semana8").value = res8;
       })
     }
 
@@ -440,7 +442,7 @@
       })
       .change();
     };
-
+    
     // Alterna entre Hide/Show do modal e das respostas
     function modal(){
       $('#botaoAjuda').click(function(){
