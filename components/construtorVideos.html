@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="../styles/home/home.css">
     <link rel="stylesheet" href="../styles/construtor-videos/construtorVideos.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- INICIO BARRA DE NAVEGAÇÃO -->
@@ -73,7 +75,16 @@
     <div  data-target="#list-example" data-offset="0" class="scrollspy-example">
       <h4 class="titulo-secao" id="list-item-1">Videoaula</h4>
       <p class="subtitulo">Coloque os dados corretamente para gerar.</p>
-      <br>
+      <select id="modelo-videoaula" class="">
+        <option disabled selected value="">Indique o Modelo</option>
+        <option value="Antigo">Antigo</option>
+        <option value="Classico">Classico</option>
+        <option value="Sona">Sona</option>
+      </select>
+      <span><sup>*obrigatório</sup></span>
+
+      <br><br>
+
       <div class="grid-construtor-videoaula">
         <div>
           <p>Insira o título aqui</p>
@@ -84,16 +95,18 @@
         </div>
 
         <div>
-          <p><input placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
-          <p><input placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
-          <p><input placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
-          <p><input placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
-          <p><input placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
+          <p><input id="titulo-videoaula" placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
+          <p><input id="sinopse-videoaula" placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
+          <p><input id="link-videoaula" placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
+          <p><input id="download-videoaula" placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
+          <p><input id="slide-videoaula" placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
         </div>
       </div>
 
-      <div style="margin-left: 22%; margin-top: 5%;">
-        <button class="botao-contrutor-video" type="button" name="button">GERAR</button>
+      <div style="margin-left: 9%; margin-top: 5%;">
+        <button onclick="geraVideoaula()" class="botao-contrutor-video" type="button" name="button">GERAR</button>
+
+        <button style="margin-left: 10%;" onclick="limpaVideoaula()" class="botao-contrutor-video" type="button" name="button">LIMPAR</button>
       </div>
 
     </div>
@@ -111,14 +124,16 @@
         </div>
 
         <div>
-          <p><input placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
-          <p><input placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
-          <p><input placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
+          <p><input id="titulo-videoBase" placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
+          <p><input id="link-videoBase" placeholder="Escreva um espaço em branco se não houver..." type="text" value=""></p>
+          <p><input id="sinopse-videoBase" placeholder="Escreva somente se tiver sinopse..." type="text" value=""></p>
         </div>
       </div>
 
-      <div style="margin-left: 24.5%; margin-top: 5%;">
-        <button class="botao-contrutor-video" type="button" name="button">GERAR</button>
+      <div style="margin-left: 11%; margin-top: 5%;">
+        <button onclick="geraVideoBase()" class="botao-contrutor-video" type="button" name="button">GERAR</button>
+
+        <button style="margin-left: 12%;" onclick="limpaVideoBase()" class="botao-contrutor-video" type="button" name="button">LIMPAR</button>
       </div>
     </div>
   </div>
@@ -128,5 +143,195 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <script>
+    function geraVideoaula(){
+      let tituloVideoaula = document.getElementById('titulo-videoaula').value;
+      let sinopseVideoaula = document.getElementById('sinopse-videoaula').value;
+      let linkVideoaula = document.getElementById('link-videoaula').value;
+      let downloadVideoaulaIncorreto = document.getElementById('download-videoaula').value;
+      let downloadVideoaula = downloadVideoaulaIncorreto.replace("https://drive.google.com/file/d/", "https://drive.google.com/uc?export=download&id=");
+      let slideVideoaula = document.getElementById('slide-videoaula').value;
+      let modeloVideoaula = document.getElementById('modelo-videoaula').value;
+
+      let videoaula = {
+        titulo: tituloVideoaula, sinopse: sinopseVideoaula, link: linkVideoaula, download: downloadVideoaula, slide: slideVideoaula
+      }
+
+      if (modeloVideoaula === "Antigo" && videoaula.titulo !== "" && videoaula.sinopse !== "" && videoaula.link !== "" && videoaula.download !== "" && videoaula.slide !== "") {
+
+        let copia = `<div class="graduation">
+        <div class="container">
+        	<div class="content-item video primary">
+        		<div class="icon">
+        			<img src="https://assets.univesp.br/canvas/img/video.svg">
+        		</div>
+        		<div class="content">
+        			<h5>Videoaula</h5>
+        			<h2>${videoaula.titulo}</h2><!-- título -->
+        		</div>
+        	</div>
+        	<div class="content-item-body">
+        		<iframe src=${videoaula.link.replace("https://youtu.be/", "https://www.youtube.com/embed/")} width="300" height="150" allowfullscreen="allowfullscreen"></iframe>
+        		<div class="btn-bar">
+
+        			<a class="btn btn-padrao icon-educators" href=${videoaula.slide.replace("view?usp=sharing", "preview")} target="_blank" rel="noopener noreferrer">Slides de  Apoio</a>
+
+        			<a class="btn btn-padrao icon-cloud-download" href=${videoaula.download.replace("/view?usp=sharing", "")} target="_blank" rel="noopener noreferrer">Download do Vídeo</a>
+        		</div>
+        		<div class="synopsis"><p>${videoaula.sinopse}</p></div><!-- texto -->
+        	</div>
+        </div>
+        </div>`
+
+        navigator.clipboard.writeText(copia)
+
+      } else if (modeloVideoaula === "Classico" && videoaula.titulo !== "" && videoaula.sinopse !== "" && videoaula.link !== "" && videoaula.download !== "" && videoaula.slide !== "") {
+
+        let copia = `<div class="graduation">
+        <div class="container">
+        	<div class="content-item video primary">
+        		<div class="icon">
+        			<img src="https://assets.univesp.br/canvas/img/video.svg">
+        		</div>
+        		<div class="content">
+        			<h5>Videoaula</h5>
+        			<h2>${videoaula.titulo}</h2>
+        		</div>
+        	</div>
+        	<div class="content-item-body">
+        		<iframe src=${videoaula.link.replace("https://youtu.be/", "https://www.youtube.com/embed/")} width="300" height="150" allowfullscreen="allowfullscreen"></iframe>
+        		<div class="btn-bar">
+        			<a class="btn btn-padrao icon-educators" href=${videoaula.slide.replace("view?usp=sharing", "preview")} target="_blank">Slides de  Apoio</a>
+        			<a class="btn btn-padrao icon-cloud-download" href=${videoaula.download.replace("/view?usp=sharing", "")} target="_blank">Download do Vídeo</a>
+        		</div>
+        		<div class="synopsis"><p>${videoaula.sinopse}</p></div><span class="end"> </span>
+        	</div>
+        </div>
+        </div>`
+
+        navigator.clipboard.writeText(copia)
+
+      } else if (modeloVideoaula === "Sona" && videoaula.titulo !== "" && videoaula.sinopse !== "" && videoaula.link !== "" && videoaula.download !== "" && videoaula.slide !== "") {
+
+        let copia = `<div class="graduation">
+        <div class="container">
+        	<div class="content-item video primary">
+        		<div class="icon">
+        			<img src="https://assets.univesp.br/canvas/img/video.svg">
+        		</div>
+        		<div class="content">
+        			<h5>Videoaula do professor</h5>
+        			<h2>${videoaula.titulo}</h2>
+        		</div>
+        	</div>
+        	<div class="content-item-body">
+        		<iframe src=${videoaula.link.replace("https://youtu.be/", "https://www.youtube.com/embed/")} width="300" height="150" allowfullscreen="allowfullscreen"></iframe>
+        		<div class="btn-bar">
+        			<a class="btn btn-padrao icon-educators" href=${videoaula.slide.replace("view?usp=sharing", "preview")} target="_blank">Slides de  Apoio</a>
+        			<a class="btn btn-padrao icon-cloud-download" href=${videoaula.download.replace("/view?usp=sharing", "")} target="_blank">Download do Vídeo</a>
+        		</div>
+        		<div class="synopsis"><p>${videoaula.sinopse}</p></div><span class="end"> </span>
+        	</div>
+        </div>
+        </div>`
+
+        navigator.clipboard.writeText(copia)
+
+      }
+    }
+
+    function geraVideoBase(){
+      let tituloVideoBase = document.getElementById('titulo-videoBase').value;
+      let linkVideoBase = document.getElementById('link-videoBase').value;
+      let sinopseVideoBase = document.getElementById('sinopse-videoBase').value;
+
+      let videoBase = {
+        tituloBase: tituloVideoBase,
+        linkBase: linkVideoBase,
+        sinopseBase: sinopseVideoBase
+      }
+
+      if (videoBase.tituloBase !== "" && videoBase.linkBase !== "" && videoBase.sinopseBase === "") {
+
+        let copiaBase = `<div class="graduation">
+        <div class="container">
+        <div class="content-item video primary">
+        	<div class="icon">
+        		<img src="https://assets.univesp.br/canvas/img/video.svg">
+        	</div>
+        	<div class="content">
+        		<h5>Vídeo-base</h5>
+        		<h2>${videoBase.tituloBase}</h2>
+        	</div>
+        </div>
+        <div class="content-item-body">
+        	<iframe src=${videoBase.linkBase.replace("https://youtu.be/", "https://www.youtube.com/embed/")} width="300" height="150" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+        </div>
+        </div>`
+
+        navigator.clipboard.writeText(copiaBase)
+
+      } else if (videoBase.tituloBase !== "" && videoBase.linkBase !== "" && videoBase.sinopseBase !== "") {
+
+        let copiaBase = `<div class="graduation">
+        <div class="container">
+        <div class="content-item video primary">
+          <div class="icon">
+            <img src="https://assets.univesp.br/canvas/img/video.svg">
+          </div>
+          <div class="content">
+            <h5>Vídeo-base</h5>
+            <h2>${videoBase.tituloBase}</h2>
+          </div>
+        </div>
+        <div class="content-item-body">
+          <iframe src=${videoBase.linkBase.replace("https://youtu.be/", "https://www.youtube.com/embed/")} width="300" height="150" allowfullscreen="allowfullscreen"></iframe>
+
+          <div class="synopsis"><p>${videoBase.sinopseBase}</p></div>
+        </div>
+        </div>
+        </div>`
+
+        navigator.clipboard.writeText(copiaBase)
+      }
+    }
+
+    function limpaVideoaula(){
+      let tituloVideoaula = document.getElementById('titulo-videoaula').value;
+      let sinopseVideoaula = document.getElementById('sinopse-videoaula').value;
+      let linkVideoaula = document.getElementById('link-videoaula').value;
+      let downloadVideoaula = document.getElementById('download-videoaula').value;
+      let slideVideoaula = document.getElementById('slide-videoaula').value;
+      let modeloVideoaula = document.getElementById('modelo-videoaula').value;
+
+      if (tituloVideoaula !== "" || sinopseVideoaula !== "" || linkVideoaula !== "" || downloadVideoaula !== "" || slideVideoaula !== "" || modeloVideoaula !== "") {
+
+        document.getElementById('titulo-videoaula').value = "";
+        document.getElementById('sinopse-videoaula').value = "";
+        document.getElementById('link-videoaula').value = "";
+        document.getElementById('download-videoaula').value = "";
+        document.getElementById('slide-videoaula').value = "";
+        document.getElementById('modelo-videoaula').value = "";
+      }
+    }
+
+    function limpaVideoBase(){
+      let tituloVideoBase = document.getElementById('titulo-videoBase').value;
+      let linkVideoBase = document.getElementById('link-videoBase').value;
+      let sinopseVideoBase = document.getElementById('sinopse-videoBase').value;
+
+      if (tituloVideoBase !== "" || linkVideoBase !== "" || sinopseVideoBase !== "") {
+
+        document.getElementById('titulo-videoBase').value = "";
+        document.getElementById('link-videoBase').value = "";
+        document.getElementById('sinopse-videoBase').value = "";
+
+      }
+    }
+  </script>
+
   </body>
 </html>
