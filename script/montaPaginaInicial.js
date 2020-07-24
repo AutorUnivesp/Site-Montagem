@@ -7,7 +7,7 @@ function montaPaginaInicial() {
     let dataSemana6 = document.getElementById('data-semana6').value;
     let dataSemana7 = document.getElementById('data-semana7').value;
     let dataSemana8 = document.getElementById('data-semana8').value;
-  
+
     let temaSemana1 = document.getElementById('tema-semana1').value;
     let temaSemana2 = document.getElementById('tema-semana2').value;
     let temaSemana3 = document.getElementById('tema-semana3').value;
@@ -16,7 +16,7 @@ function montaPaginaInicial() {
     let temaSemana6 = document.getElementById('tema-semana6').value;
     let temaSemana7 = document.getElementById('tema-semana7').value;
     let temaSemana8 = document.getElementById('tema-semana8').value;
-  
+
     let linkSemana1 = document.getElementById('link-semana1').value;
     let linkSemana2 = document.getElementById('link-semana2').value;
     let linkSemana3 = document.getElementById('link-semana3').value;
@@ -25,27 +25,27 @@ function montaPaginaInicial() {
     let linkSemana6 = document.getElementById('link-semana6').value;
     let linkSemana7 = document.getElementById('link-semana7').value;
     let linkSemana8 = document.getElementById('link-semana8').value;
-  
+
     let nomeDisciplina = document.getElementById('disciplinaName').value;
     let bannerDisciplina = document.getElementById('bannerField').value;
     let cursoName = document.getElementById('curseField').value;
     let planoEnsino = document.getElementById('planoField').value;
-  
+
     let apresentacaoLink = document.getElementById('videoLink').value;
     let downloadField = document.getElementById('downloadLink').value;
     let downloadTratadoField = downloadField.replace("https://drive.google.com/file/d/", "https://drive.google.com/uc?export=download&id=");
-  
+
     let qtdeHoras = document.getElementById('cargaHoraria').value;
     let horaSemana = document.getElementById('horaSemana').value;
     let dataProva = document.getElementById('dataProva').value;
     let data2Prova = document.getElementById('dataProva1').value;
-  
+
     let profName = document.getElementById('professorName').value;
     let profImg = document.getElementById('professorFoto').value;
     let curriculoProf = document.getElementById('curriculoField').value
-  
+
     let resumoVisual = document.getElementById('resumoVisual1').value
-  
+
     let menuSemanas = {
       date1: dataSemana1, date2: dataSemana2, date3: dataSemana3, date4: dataSemana4,
       date5: dataSemana5, date6: dataSemana6, date7: dataSemana7, date8: dataSemana8,
@@ -54,28 +54,28 @@ function montaPaginaInicial() {
       link1: linkSemana1, link2: linkSemana2, link3: linkSemana3, link4: linkSemana4,
       link5: linkSemana5, link6: linkSemana6, link7: linkSemana7, link8: linkSemana8,
       disciplina: nomeDisciplina, banner: bannerDisciplina, curso: cursoName,
-      plano: planoEnsino, video: apresentacaoLink, download: downloadTratadoField, 
+      plano: planoEnsino, video: apresentacaoLink, download: downloadTratadoField,
       horas: qtdeHoras, horaSemana: horaSemana, prova: dataProva, prova2: data2Prova,
       professor: profName, foto: profImg, curriculo: curriculoProf, resumo: resumoVisual
     }
-      // TopoSemanasSemVideo 7
-    if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-      && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == "" 
-      && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-      && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-      && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-      && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-      && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-      && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-      && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
+      // TopoSemanasSemVideo 7 - If 1
+    if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+      && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
+      && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+      && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+      && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+      && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+      && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+      && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+      && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
       && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
       && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
-      && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+      && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
       && menuSemanas.tema8 == "" && menuSemanas.link8 == "") {
-        
+
         console.log(" TopoSemanasSemVideo 7")
         console.log(menuSemanas)
-        let copia = 
+        let copia =
         `<div class="graduation">
         <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
           <div class="container">
@@ -87,12 +87,12 @@ function montaPaginaInicial() {
         </div>
         <div class="planejamento-estudo">
           <h1>Planejamento de Estudos</h1>
-          <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-          <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemanal} horas/semana</strong></p>
+          <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+          <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemanal} horas/semana</strong></p>
           <hr />
-          <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-          <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-            <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+          <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+          <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+            <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
               href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
         </div>
         <div class="intro">
@@ -205,23 +205,23 @@ function montaPaginaInicial() {
         </div>
       </div>`
       navigator.clipboard.writeText(copia)
-      
-      // TopoSemanasSemVideoComResumo 7
 
-      } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-                && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == "" 
-                && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-                && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-                && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-                && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-                && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-                && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-                && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-                && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-                && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-                && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+      // TopoSemanasSemVideoComResumo 7 - If 2
+
+      } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+                && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
+                && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+                && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+                && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+                && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+                && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+                && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+                && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+                && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+                && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+                && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
                 && menuSemanas.tema8 == "" && menuSemanas.link8 == "") {
-        
+
         console.log("TopoSemanasSemVideoComResumo 7")
         console.log(menuSemanas)
         let copia =
@@ -236,12 +236,12 @@ function montaPaginaInicial() {
         </div>
         <div class="planejamento-estudo">
           <h1>Planejamento de Estudos</h1>
-          <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-          <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
+          <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+          <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
           <hr />
-          <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-          <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-            <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+          <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+          <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+            <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
               href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
         </div>
         <div class="intro">
@@ -260,7 +260,7 @@ function montaPaginaInicial() {
               <div class="resumo-visual">
               <div>
               <h3>Resumo Visual da Disciplina</h3>
-              <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e compet�ncias desenvolvidos ao longo da semanas.</p>
+              <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e competências desenvolvidos ao longo da semanas.</p>
               </div>
               <img style="maxWidth: 850px;" src=${'https://assets.univesp.br/canvas/img/resumovisual2.svg'} />
               </div>
@@ -364,25 +364,25 @@ function montaPaginaInicial() {
       </div>`
       navigator.clipboard.writeText(copia)
 
-      // TopoSemanasSemVideoComResumo 8
+      // TopoSemanasSemVideoComResumo 8 - If 3
 
-      } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-                && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == "" 
-                && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-                && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-                && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-                && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-                && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-                && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-                && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-                && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-                && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-                && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+      } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+                && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
+                && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+                && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+                && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+                && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+                && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+                && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+                && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+                && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+                && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+                && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
                 && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
 
         console.log("TopoSemanasSemVideoComResumo 8")
         console.log(menuSemanas)
-        let copia = 
+        let copia =
         `<div class="graduation">
         <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
           <div class="container">
@@ -394,12 +394,12 @@ function montaPaginaInicial() {
         </div>
         <div class="planejamento-estudo">
           <h1>Planejamento de Estudos</h1>
-          <p style="marginTop:0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-          <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemanal} horas/semana</strong></p>
+          <p style="marginTop:0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+          <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemanal} horas/semana</strong></p>
           <hr />
-          <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-          <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-            <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+          <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+          <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+            <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
               href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
         </div>
         <div class="intro">
@@ -418,7 +418,7 @@ function montaPaginaInicial() {
               <div class="resumo-visual">
               <div>
               <h3>Resumo Visual da Disciplina</h3>
-              <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e compet�ncias desenvolvidos ao longo da semanas.</p>
+              <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e competências desenvolvidos ao longo da semanas.</p>
               </div>
               <img style="maxWidth: 850px;" src=${'https://assets.univesp.br/canvas/img/resumovisual2.svg'} />
               </div>
@@ -536,26 +536,26 @@ function montaPaginaInicial() {
       navigator.clipboard.writeText(copia)
 
 
-      // TopoSemanasSemVideo2DatasComResumo 7
+      // TopoSemanasSemVideo2DatasComResumo 7 - If 4
 
-      } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-                && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == "" 
-                && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-                && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-                && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-                && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-                && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-                && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-                && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-                && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-                && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-                && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+      } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+                && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
+                && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+                && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+                && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+                && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+                && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+                && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+                && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+                && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+                && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+                && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
                 && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
         console.log("TopoSemanasSemVideo2DatasComResumo 7")
         console.log(menuSemanas)
 
-        let copia = 
+        let copia =
         `<div class="graduation">
         <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
           <div class="container">
@@ -567,12 +567,12 @@ function montaPaginaInicial() {
         </div>
         <div class="planejamento-estudo">
           <h1>Planejamento de Estudos</h1>
-          <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-          <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
+          <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+          <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
           <hr />
-          <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-          <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-            <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+          <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+          <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+            <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
               href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
         </div>
         <div class="intro">
@@ -591,7 +591,7 @@ function montaPaginaInicial() {
               <div class="resumo-visual">
               <div>
               <h3>Resumo Visual da Disciplina</h3>
-              <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e compet�ncias desenvolvidos ao longo da semanas.</p>
+              <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e competências desenvolvidos ao longo da semanas.</p>
               </div>
               <img style="maxWidth: 850px;" src=${'https://assets.univesp.br/canvas/img/resumovisual2.svg'} />
               </div>
@@ -695,25 +695,25 @@ function montaPaginaInicial() {
       </div>`
       navigator.clipboard.writeText(copia)
 
-      // TopoSemanasSemVideo2DatasComResumo 8
-  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-            && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == "" 
-            && menuSemanas.horas !== "" && menuSemanas.horaSemanal !== "" && menuSemanas.prova !== "" 
-            && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-            && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+      // TopoSemanasSemVideo2DatasComResumo 8 - If 5
+  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+            && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
+            && menuSemanas.horas !== "" && menuSemanas.horaSemanal !== "" && menuSemanas.prova !== ""
+            && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+            && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
             && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
 
       console.log("TopoSemanasSemVideo2DatasComResumo 8 ")
       console.log(menuSemanas)
 
-      let copia = 
+      let copia =
       `<div class="graduation">
       <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
         <div class="container">
@@ -725,12 +725,12 @@ function montaPaginaInicial() {
       </div>
       <div class="planejamento-estudo">
         <h1>Planejamento de Estudos</h1>
-        <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-        <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemanal} horas/semana</strong></p>
+        <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+        <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemanal} horas/semana</strong></p>
         <hr />
-        <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-        <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-          <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+        <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+        <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+          <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
             href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
       </div>
       <div class="intro">
@@ -749,7 +749,7 @@ function montaPaginaInicial() {
             <div class="resumo-visual">
             <div>
             <h3>Resumo Visual da Disciplina</h3>
-            <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e compet�ncias desenvolvidos ao longo da semanas.</p>
+            <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e competências desenvolvidos ao longo da semanas.</p>
             </div>
             <img style="maxWidth: 850px;" src=${'https://assets.univesp.br/canvas/img/resumovisual2.svg'} />
             </div>
@@ -867,25 +867,25 @@ function montaPaginaInicial() {
       navigator.clipboard.writeText(copia)
 
 
-    // TopoSemanasSemVideo2Datas 7
-  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-            && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == "" 
-            && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-            && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-            && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+    // TopoSemanasSemVideo2Datas 7 - If 6
+  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+            && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
+            && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+            && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+            && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
             && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
     console.log("TopoSemanasSemVideo2Datas 7")
     console.log(menuSemanas)
 
-    let copia = 
+    let copia =
     `<div class="graduation">
     <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
       <div class="container">
@@ -897,12 +897,12 @@ function montaPaginaInicial() {
     </div>
     <div class="planejamento-estudo">
       <h1>Planejamento de Estudos</h1>
-      <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-      <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
+      <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+      <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
       <hr />
-      <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-      <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-        <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+      <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+      <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+        <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
           href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
     </div>
     <div class="intro">
@@ -1015,27 +1015,27 @@ function montaPaginaInicial() {
     </div>
   </div>`
     navigator.clipboard.writeText(copia)
-    
 
-  // TopoSemanasSemVideo 8
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+
+  // TopoSemanasSemVideo 8 - If 7
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
           && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
 
   console.log("TopoSemanasSemVideo 8")
   console.log(menuSemanas)
 
-  let copia = 
+  let copia =
   `<div class="graduation">
   <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
     <div class="container">
@@ -1047,12 +1047,12 @@ function montaPaginaInicial() {
   </div>
   <div class="planejamento-estudo">
     <h1>Planejamento de Estudos</h1>
-    <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-    <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
+    <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+    <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
     <hr />
-    <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-    <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-      <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+    <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+    <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+      <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
         href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
   </div>
   <div class="intro">
@@ -1178,27 +1178,27 @@ function montaPaginaInicial() {
   </div>
 </div>`
   navigator.clipboard.writeText(copia)
-  
 
-  // TopoSemanasSemVideo2Datas 8
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas !== "" && menuSemanas.horaSemanal !== "" && menuSemanas.prova !== "" 
-          && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+
+  // TopoSemanasSemVideo2Datas 8 - If 8
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas !== "" && menuSemanas.horaSemanal !== "" && menuSemanas.prova !== ""
+          && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
           && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
 
   console.log("TopoSemanasSemVideo2Datas 8")
   console.log(menuSemanas)
 
-  let copia = 
+  let copia =
   `<div class="graduation">
   <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
     <div class="container">
@@ -1210,12 +1210,12 @@ function montaPaginaInicial() {
   </div>
   <div class="planejamento-estudo">
     <h1>Planejamento de Estudos</h1>
-    <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-    <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemanal} horas/semana</strong></p>
+    <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+    <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemanal} horas/semana</strong></p>
     <hr />
-    <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-    <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-      <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+    <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+    <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+      <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
         href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
   </div>
   <div class="intro">
@@ -1342,7 +1342,7 @@ function montaPaginaInicial() {
   navigator.clipboard.writeText(copia)
 
 
-  //TopoSemanasSemEstudo 7
+  //TopoSemanasSemEstudo 7 - If 9
 } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
           && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
           && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
@@ -1359,7 +1359,7 @@ function montaPaginaInicial() {
 
   console.log("TopoSemanasSemEstudo 7")
   console.log(menuSemanas)
-  let copia = 
+  let copia =
   `<div class="graduation">
   <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
     <div class="container">
@@ -1483,25 +1483,25 @@ function montaPaginaInicial() {
 </div>`
   navigator.clipboard.writeText(copia)
 
-    // TopoSemanasSemEstudo 8
-  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-            && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== "" 
-            && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-            && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-            && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+    // TopoSemanasSemEstudo 8 - If 10
+  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+            && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
+            && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+            && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+            && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
             && menuSemanas.tema8 !== "" && menuSemanas.link8 !== "") {
-  
+
     console.log("TopoSemanasSemEstudo 8")
     console.log(menuSemanas)
 
-    let copia = 
+    let copia =
     `<div class="graduation">
     <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
       <div class="container">
@@ -1638,25 +1638,25 @@ function montaPaginaInicial() {
   </div>`
     navigator.clipboard.writeText(copia)
 
-    // TopoSemanasSemEstudoComResumo 7
-  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-            && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== "" 
-            && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-            && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-            && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+    // TopoSemanasSemEstudoComResumo 7 - If 11
+  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+            && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
+            && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+            && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+            && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
             && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
     console.log("TopoSemanasSemEstudoComResumo 7")
     console.log(menuSemanas)
 
-    let copia = 
+    let copia =
     `<div class="graduation">
     <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
       <div class="container">
@@ -1685,7 +1685,7 @@ function montaPaginaInicial() {
           <div class="resumo-visual">
           <div>
           <h3>Resumo Visual da Disciplina</h3>
-          <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e compet�ncias desenvolvidos ao longo da semanas.</p>
+          <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e competências desenvolvidos ao longo da semanas.</p>
           </div>
           <img style="maxWidth: 850px;" src=${'https://assets.univesp.br/canvas/img/resumovisual2.svg'} />
           </div>
@@ -1788,24 +1788,25 @@ function montaPaginaInicial() {
     </div>
   </div>`
     navigator.clipboard.writeText(copia)
-      // TopoSemanasSemEstudoComResumo 8
-  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-            && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== "" 
-            && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-            && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-            && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
+
+      // TopoSemanasSemEstudoComResumo 8 - If 12
+  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+            && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
+            && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+            && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+            && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
             && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
-            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
             && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
-              
+
               console.log("TopoSemanasSemEstudoComResumo 8")
               console.log(menuSemanas)
-              let copia = 
+              let copia =
               `<div class="graduation">
               <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
                 <div class="container">
@@ -1834,7 +1835,7 @@ function montaPaginaInicial() {
                     <div class="resumo-visual">
                     <div>
                     <h3>Resumo Visual da Disciplina</h3>
-                    <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e compet�ncias desenvolvidos ao longo da semanas.</p>
+                    <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e competências desenvolvidos ao longo da semanas.</p>
                     </div>
                     <img style="maxWidth: 850px;" src=${'https://assets.univesp.br/canvas/img/resumovisual2.svg'} />
                     </div>
@@ -1950,25 +1951,26 @@ function montaPaginaInicial() {
               </div>
             </div>`
               navigator.clipboard.writeText(copia)
-                // TopoSemanasSemPlanejamento_e_Video 7
-  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-            && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == "" 
-            && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
+
+                // TopoSemanasSemPlanejamento_e_Video 7 - If 13
+  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+            && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
+            && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
             && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
-            && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+            && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
             && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
               console.log("TopoSemanasSemPlanejamento_e_Video 7")
               console.log(menuSemanas)
 
-              let copia = 
+              let copia =
               `<div class="graduation">
               <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
                 <div class="container">
@@ -2089,24 +2091,24 @@ function montaPaginaInicial() {
             </div>`
               navigator.clipboard.writeText(copia)
 
-  // TopoSemanasSemPlanejamento_e_Video 8
-  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
+  // TopoSemanasSemPlanejamento_e_Video 8 - If 14
+  } else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
             && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
-            && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-            && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-            && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+            && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+            && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+            && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+            && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+            && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+            && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+            && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+            && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+            && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+            && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
             && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
               console.log("TopoSemanasSemPlanejamento_e_Video 8")
               console.log(menuSemanas)
 
-              let copia = 
+              let copia =
               `<div class="graduation">
               <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
                 <div class="container">
@@ -2239,25 +2241,26 @@ function montaPaginaInicial() {
               </div>
             </div>`
               navigator.clipboard.writeText(copia)
-      // TopoSemanasSemPlanejamento_e_Video_ComResumo 7
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+
+      // TopoSemanasSemPlanejamento_e_Video_ComResumo 7 - If 15
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("TopoSemanasSemPlanejamento_e_Video_ComResumo 7")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="graduation">
             <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
               <div class="container">
@@ -2283,7 +2286,7 @@ function montaPaginaInicial() {
                   <div class="resumo-visual">
                   <div>
                   <h3>Resumo Visual da Disciplina</h3>
-                  <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e compet�ncias desenvolvidos ao longo da semanas.</p>
+                  <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e competências desenvolvidos ao longo da semanas.</p>
                   </div>
                   <img style="maxWidth: 850px;" src=${'https://assets.univesp.br/canvas/img/resumovisual2.svg'} />
                   </div>
@@ -2387,25 +2390,25 @@ function montaPaginaInicial() {
           </div>`
             navigator.clipboard.writeText(copia)
 
-      // TopoSemanasSemPlanejamento_e_Video_ComResumo 8
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+      // TopoSemanasSemPlanejamento_e_Video_ComResumo 8 - If 16
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
           && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
 
             console.log("TopoSemanasSemPlanejamento_e_Video_ComResumo 8")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="graduation">
             <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
               <div class="container">
@@ -2431,7 +2434,7 @@ function montaPaginaInicial() {
                   <div class="resumo-visual">
                   <div>
                   <h3>Resumo Visual da Disciplina</h3>
-                  <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e compet�ncias desenvolvidos ao longo da semanas.</p>
+                  <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e competências desenvolvidos ao longo da semanas.</p>
                   </div>
                   <img style="maxWidth: 850px;" src=${'https://assets.univesp.br/canvas/img/resumovisual2.svg'} />
                   </div>
@@ -2548,25 +2551,25 @@ function montaPaginaInicial() {
           </div>`
             navigator.clipboard.writeText(copia)
 
-            // TopoSemanas 7
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== "" 
-          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+            // TopoSemanas 7 - If 17
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
+          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("TopoSemanas 7")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="graduation">
             <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
               <div class="container">
@@ -2578,12 +2581,12 @@ function montaPaginaInicial() {
             </div>
             <div class="planejamento-estudo">
               <h1>Planejamento de Estudos</h1>
-              <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-              <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemanal} horas/semana</strong></p>
+              <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+              <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemanal} horas/semana</strong></p>
               <hr />
-              <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-              <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-                <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+              <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+              <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+                <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
                   href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
             </div>
             <div class="intro">
@@ -2700,25 +2703,25 @@ function montaPaginaInicial() {
           </div>`
             navigator.clipboard.writeText(copia)
 
-            // TopoSemanasComResumo 7
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== "" 
-          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+            // TopoSemanasComResumo 7 - If 18
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
+          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("TopoSemanasComResumo 7")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="graduation">
             <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
               <div class="container">
@@ -2730,12 +2733,12 @@ function montaPaginaInicial() {
             </div>
             <div class="planejamento-estudo">
               <h1>Planejamento de Estudos</h1>
-              <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-              <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
+              <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+              <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
               <hr />
-              <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-              <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-                <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+              <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+              <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+                <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
                   href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
             </div>
             <div class="intro">
@@ -2757,7 +2760,7 @@ function montaPaginaInicial() {
                   <div class="resumo-visual">
                   <div>
                   <h3>Resumo Visual da Disciplina</h3>
-                  <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e compet�ncias desenvolvidos ao longo da semanas.</p>
+                  <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e competências desenvolvidos ao longo da semanas.</p>
                   </div>
                   <img style="maxWidth: 850px;" src=${'https://assets.univesp.br/canvas/img/resumovisual2.svg'} />
                   </div>
@@ -2861,19 +2864,19 @@ function montaPaginaInicial() {
           </div>`
             navigator.clipboard.writeText(copia)
 
-            // TopoSemanas2Datas 7
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== "" 
-          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-          && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+            // TopoSemanas2Datas 7 - If 19
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
+          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+          && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("TopoSemanas2Datas 7")
@@ -2890,12 +2893,12 @@ function montaPaginaInicial() {
             </div>
             <div class="planejamento-estudo">
               <h1>Planejamento de Estudos</h1>
-              <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-              <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
+              <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+              <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
               <hr />
-              <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-              <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-                <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+              <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+              <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+                <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
                   href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
             </div>
             <div class="intro">
@@ -3012,25 +3015,25 @@ function montaPaginaInicial() {
           </div>`
             navigator.clipboard.writeText(copia)
 
-            // TopoSemanas2DatasComResumo 7
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== "" 
-          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-          && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+            // TopoSemanas2DatasComResumo 7 - If 20
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
+          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+          && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("TopoSemanas2DatasComResumo 7")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="graduation">
             <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
               <div class="container">
@@ -3042,12 +3045,12 @@ function montaPaginaInicial() {
             </div>
             <div class="planejamento-estudo">
               <h1>Planejamento de Estudos</h1>
-              <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-              <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
+              <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+              <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
               <hr />
-              <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-              <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-                <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+              <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+              <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+                <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
                   href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
             </div>
             <div class="intro">
@@ -3069,7 +3072,7 @@ function montaPaginaInicial() {
                   <div class="resumo-visual">
                   <div>
                   <h3>Resumo Visual da Disciplina</h3>
-                  <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e compet�ncias desenvolvidos ao longo da semanas.</p>
+                  <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e competências desenvolvidos ao longo da semanas.</p>
                   </div>
                   <img style="maxWidth: 850px;" src=${'https://assets.univesp.br/canvas/img/resumovisual2.svg'} />
                   </div>
@@ -3173,25 +3176,25 @@ function montaPaginaInicial() {
           </div>`
             navigator.clipboard.writeText(copia)
 
-            // TopoSemanas 8
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== "" 
-          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+            // TopoSemanas 8 - If 21
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
+          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
           && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
 
             console.log("TopoSemanas 8")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="graduation">
             <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
               <div class="container">
@@ -3203,12 +3206,12 @@ function montaPaginaInicial() {
             </div>
             <div class="planejamento-estudo">
               <h1>Planejamento de Estudos</h1>
-              <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-              <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
+              <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+              <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
               <hr />
-              <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-              <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-                <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+              <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+              <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+                <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
                   href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
             </div>
             <div class="intro">
@@ -3338,25 +3341,25 @@ function montaPaginaInicial() {
           </div>`
             navigator.clipboard.writeText(copia)
 
-            // TopoSemanasComResumo 8
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== "" 
-          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+            // TopoSemanasComResumo 8 - If 22
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
+          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
           && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
 
             console.log("TopoSemanasComResumo 8")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="graduation">
             <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
               <div class="container">
@@ -3368,12 +3371,12 @@ function montaPaginaInicial() {
             </div>
             <div class="planejamento-estudo">
               <h1>Planejamento de Estudos</h1>
-              <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-              <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
+              <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+              <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
               <hr />
-              <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-              <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-                <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+              <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente no dia <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong>. Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+              <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+                <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
                   href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
             </div>
             <div class="intro">
@@ -3395,7 +3398,7 @@ function montaPaginaInicial() {
                   <div class="resumo-visual">
                   <div>
                   <h3>Resumo Visual da Disciplina</h3>
-                  <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e compet�ncias desenvolvidos ao longo da semanas.</p>
+                  <p>Acompanhe seu progresso nesta lista de conhecimentos, habilidades e competências desenvolvidos ao longo da semanas.</p>
                   </div>
                   <img style="maxWidth: 850px;" src=${'https://assets.univesp.br/canvas/img/resumovisual2.svg'} />
                   </div>
@@ -3512,25 +3515,25 @@ function montaPaginaInicial() {
           </div>`
             navigator.clipboard.writeText(copia)
 
-            // TopoSemanas2Datas 8
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== "" 
-          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-          && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+            // TopoSemanas2Datas 8 - If 23
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
+          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+          && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
           && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
 
             console.log("TopoSemanas2Datas 8")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="graduation">
             <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
               <div class="container">
@@ -3542,12 +3545,12 @@ function montaPaginaInicial() {
             </div>
             <div class="planejamento-estudo">
               <h1>Planejamento de Estudos</h1>
-              <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-              <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
+              <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+              <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
               <hr />
-              <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-              <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-                <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+              <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+              <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+                <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
                   href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
             </div>
             <div class="intro">
@@ -3678,25 +3681,25 @@ function montaPaginaInicial() {
 
             navigator.clipboard.writeText(copia)
 
-            // TopoSemanas2DatasComResumo 8
-} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== "" 
-          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== "" 
-          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== "" 
-          && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== "" 
-          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+            // TopoSemanas2DatasComResumo 8 - If 24
+} else if (menuSemanas.disciplina !== "" && menuSemanas.banner !== "" && menuSemanas.curso !== ""
+          && menuSemanas.plano !== "" && menuSemanas.video !== "" && menuSemanas.download !== ""
+          && menuSemanas.horas !== "" && menuSemanas.horaSemana !== "" && menuSemanas.prova !== ""
+          && menuSemanas.prova2 !== "" && menuSemanas.professor !== "" && menuSemanas.foto !== ""
+          && menuSemanas.curriculo !== "" && menuSemanas.resumo !== "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
           && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
 
             console.log("TopoSemanas2DatasComResumo 8")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="graduation">
             <div class="container header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + menuSemanas.banner} />
               <div class="container">
@@ -3708,12 +3711,12 @@ function montaPaginaInicial() {
             </div>
             <div class="planejamento-estudo">
               <h1>Planejamento de Estudos</h1>
-              <p style="marginTop: 0;">Esta disciplina � de <strong>${menuSemanas.horas} horas</strong></p>
-              <p>Est� previsto que voc� use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
+              <p style="marginTop: 0;">Esta disciplina é de <strong>${menuSemanas.horas} horas</strong></p>
+              <p>Está previsto que você use cerca de <strong>${menuSemanas.horaSemana} horas/semana</strong></p>
               <hr />
-              <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exce��o</strong>, ser� informada por e-mail.</p>
-              <p>A nota da disciplina � calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="M�dia das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
-                <span class="tooltipbr" data-title="M�dia Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
+              <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente nos dias <strong> ${transformaData(menuSemanas.prova)[2]}/${transformaData2(menuSemanas.prova)[1]}</strong> e <strong> ${transformaData(menuSemanas.prova2)[2]}/${transformaData2(menuSemanas.prova2)[1]}</strong>. <br /> Qualquer <strong>exceção</strong>, será informada por e-mail.</p>
+              <p>A nota da disciplina é calculada: (<span class="tooltipbr" data-title="Nota da prova regular">N1</span> x 0,6) + (<span class="tooltipbr" data-title="Média das notas obtidas nas atividades realizadas no AVA.">N2</span> x 0,4) =
+                <span class="tooltipbr" data-title="Média Final">MF</span><a class="" style="marginLeft: 18%; textDecoration: none;" title=""
                   href="https://univesp.br/sites/58f6506869226e9479d38201/assets/5d5e97cb7c1bd15a5a1803db/Normas_Acad_micas_2018_Univesp.pdf" target="_blank" rel="noopener noreferrer">+ Info</a></p>
             </div>
             <div class="intro">
@@ -3851,26 +3854,26 @@ function montaPaginaInicial() {
             </div>
           </div>`
 
-          // MenuSemanasOnly 1
+          // MenuSemanasOnly 1 - If 25
             navigator.clipboard.writeText(copia)
 } else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == ""
-          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == "" 
-          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 == "" && menuSemanas.date3 == "" && menuSemanas.date4 == "" 
-          && menuSemanas.date5 == "" && menuSemanas.date6 == "" && menuSemanas.date7 == "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 == "" && menuSemanas.tema3 == "" 
-          && menuSemanas.tema4 == "" && menuSemanas.tema5 == "" && menuSemanas.tema6 == "" 
-          && menuSemanas.tema7 == "" && menuSemanas.link1 !== "" && menuSemanas.link2 == "" 
-          && menuSemanas.link3 == "" && menuSemanas.link4 == "" && menuSemanas.link5 == "" 
-          && menuSemanas.link6 == "" && menuSemanas.link7 == "" && menuSemanas.date8 == "" 
+          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == ""
+          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 == "" && menuSemanas.date3 == "" && menuSemanas.date4 == ""
+          && menuSemanas.date5 == "" && menuSemanas.date6 == "" && menuSemanas.date7 == ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 == "" && menuSemanas.tema3 == ""
+          && menuSemanas.tema4 == "" && menuSemanas.tema5 == "" && menuSemanas.tema6 == ""
+          && menuSemanas.tema7 == "" && menuSemanas.link1 !== "" && menuSemanas.link2 == ""
+          && menuSemanas.link3 == "" && menuSemanas.link4 == "" && menuSemanas.link5 == ""
+          && menuSemanas.link6 == "" && menuSemanas.link7 == "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("MenuSemanasOnly 1")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="container desbloqueio">
             <h2>Menu das Semanas</h2>
             <div class="container title semana-1 desabilitada">
@@ -3890,25 +3893,25 @@ function montaPaginaInicial() {
 
             navigator.clipboard.writeText(copia)
 
-            // MenuSemanasOnly 2
-} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == "" 
-          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == "" 
-          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 == "" && menuSemanas.date4 == "" 
-          && menuSemanas.date5 == "" && menuSemanas.date6 == "" && menuSemanas.date7 == "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 == "" 
-          && menuSemanas.tema4 == "" && menuSemanas.tema5 == "" && menuSemanas.tema6 == "" 
-          && menuSemanas.tema7 == "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 == "" && menuSemanas.link4 == "" && menuSemanas.link5 == "" 
-          && menuSemanas.link6 == "" && menuSemanas.link7 == "" && menuSemanas.date8 == "" 
+            // MenuSemanasOnly 2 - If 26
+} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == ""
+          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == ""
+          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 == "" && menuSemanas.date4 == ""
+          && menuSemanas.date5 == "" && menuSemanas.date6 == "" && menuSemanas.date7 == ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 == ""
+          && menuSemanas.tema4 == "" && menuSemanas.tema5 == "" && menuSemanas.tema6 == ""
+          && menuSemanas.tema7 == "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 == "" && menuSemanas.link4 == "" && menuSemanas.link5 == ""
+          && menuSemanas.link6 == "" && menuSemanas.link7 == "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("MenuSemanasOnly 2")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="container desbloqueio">
             <h2>Menu das Semanas</h2>
             <div class="container title semana-1 desabilitada">
@@ -3942,25 +3945,25 @@ function montaPaginaInicial() {
             navigator.clipboard.writeText(copia)
 
 
-            // MenuSemanasOnly 3
-} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == "" 
-          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == "" 
-          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
+            // MenuSemanasOnly 3 - If 27
+} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == ""
+          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == ""
+          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
           && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 == ""
-          && menuSemanas.date5 == "" && menuSemanas.date6 == "" && menuSemanas.date7 == "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 == "" && menuSemanas.tema5 == "" && menuSemanas.tema6 == "" 
+          && menuSemanas.date5 == "" && menuSemanas.date6 == "" && menuSemanas.date7 == ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 == "" && menuSemanas.tema5 == "" && menuSemanas.tema6 == ""
           && menuSemanas.tema7 == "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
           && menuSemanas.link3 !== "" && menuSemanas.link4 == "" && menuSemanas.link5 == ""
-          && menuSemanas.link6 == "" && menuSemanas.link7 == "" && menuSemanas.date8 == "" 
+          && menuSemanas.link6 == "" && menuSemanas.link7 == "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("MenuSemanasOnly 3")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="container desbloqueio">
             <h2>Menu das Semanas</h2>
             <div class="container title semana-1 desabilitada">
@@ -4006,25 +4009,25 @@ function montaPaginaInicial() {
 
             navigator.clipboard.writeText(copia)
 
-            // MenuSemanasOnly 4
-} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == "" 
-          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == "" 
-          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 == "" && menuSemanas.date6 == "" && menuSemanas.date7 == "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 == "" && menuSemanas.tema6 == "" 
-          && menuSemanas.tema7 == "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 == "" 
-          && menuSemanas.link6 == "" && menuSemanas.link7 == "" && menuSemanas.date8 == "" 
+            // MenuSemanasOnly 4 - If 28
+} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == ""
+          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == ""
+          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 == "" && menuSemanas.date6 == "" && menuSemanas.date7 == ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 == "" && menuSemanas.tema6 == ""
+          && menuSemanas.tema7 == "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 == ""
+          && menuSemanas.link6 == "" && menuSemanas.link7 == "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("MenuSemanasOnly 4")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="container desbloqueio">
             <h2>Menu das Semanas</h2>
             <div class="container title semana-1 desabilitada">
@@ -4083,25 +4086,25 @@ function montaPaginaInicial() {
 
             navigator.clipboard.writeText(copia)
 
-            // MenuSemanasOnly 5
-} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == "" 
-          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
+            // MenuSemanasOnly 5 - If 29
+} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == ""
+          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
           && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == ""
-          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 == "" && menuSemanas.date7 == "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 == "" 
-          && menuSemanas.tema7 == "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 == "" && menuSemanas.link7 == "" && menuSemanas.date8 == "" 
+          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 == "" && menuSemanas.date7 == ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 == ""
+          && menuSemanas.tema7 == "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 == "" && menuSemanas.link7 == "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("MenuSemanasOnly 5")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="container desbloqueio">
             <h2>Menu das Semanas</h2>
             <div class="container title semana-1 desabilitada">
@@ -4173,25 +4176,25 @@ function montaPaginaInicial() {
 
             navigator.clipboard.writeText(copia)
 
-            // MenuSemanasOnly 6
-} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == "" 
-          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == "" 
-          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 == "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 == "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 == "" && menuSemanas.date8 == "" 
+            // MenuSemanasOnly 6 - If 30
+} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == ""
+          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == ""
+          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 == ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 == "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 == "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("MenuSemanasOnly 6")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="container desbloqueio">
             <h2>Menu das Semanas</h2>
             <div class="container title semana-1 desabilitada">
@@ -4276,25 +4279,25 @@ function montaPaginaInicial() {
 
             navigator.clipboard.writeText(copia)
 
-            // MenuSemanasOnly 7
-} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == "" 
-          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == "" 
-          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == "" 
+            // MenuSemanasOnly 7 - If 31
+} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == ""
+          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == ""
+          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 == ""
           && menuSemanas.tema8 == "" && menuSemanas.link8 == ""){
 
             console.log("MenuSemanasOnly 7")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="container desbloqueio">
             <h2>Menu das Semanas</h2>
             <div class="container title semana-1 desabilitada">
@@ -4391,25 +4394,25 @@ function montaPaginaInicial() {
           </div>`
             navigator.clipboard.writeText(copia)
 
-            // MenuSemanasOnly 8
-} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == "" 
-          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == "" 
-          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == "" 
-          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == "" 
-          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== "" 
-          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== "" 
-          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== "" 
-          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== "" 
-          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== "" 
-          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== "" 
-          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== "" 
-          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== "" 
+            // MenuSemanasOnly 8 - If 32
+} else if (menuSemanas.disciplina == "" && menuSemanas.banner == "" && menuSemanas.curso == ""
+          && menuSemanas.plano == "" && menuSemanas.video == "" && menuSemanas.download == ""
+          && menuSemanas.horas == "" && menuSemanas.horaSemana == "0" && menuSemanas.prova == ""
+          && menuSemanas.prova2 == "" && menuSemanas.professor == "" && menuSemanas.foto == ""
+          && menuSemanas.curriculo == "" && menuSemanas.resumo == "" && menuSemanas.date1 !== ""
+          && menuSemanas.date2 !== "" && menuSemanas.date3 !== "" && menuSemanas.date4 !== ""
+          && menuSemanas.date5 !== "" && menuSemanas.date6 !== "" && menuSemanas.date7 !== ""
+          && menuSemanas.tema1 !== "" && menuSemanas.tema2 !== "" && menuSemanas.tema3 !== ""
+          && menuSemanas.tema4 !== "" && menuSemanas.tema5 !== "" && menuSemanas.tema6 !== ""
+          && menuSemanas.tema7 !== "" && menuSemanas.link1 !== "" && menuSemanas.link2 !== ""
+          && menuSemanas.link3 !== "" && menuSemanas.link4 !== "" && menuSemanas.link5 !== ""
+          && menuSemanas.link6 !== "" && menuSemanas.link7 !== "" && menuSemanas.date8 !== ""
           && menuSemanas.tema8 !== "" && menuSemanas.link8 !== ""){
 
             console.log("MenuSemanasOnly 8")
             console.log(menuSemanas)
 
-            let copia = 
+            let copia =
             `<div class="container desbloqueio">
             <h2>Menu das Semanas</h2>
             <div class="container title semana-1 desabilitada">
@@ -4518,28 +4521,28 @@ function montaPaginaInicial() {
             </div>
           </div>`
             navigator.clipboard.writeText(copia)
-          
+
     } else {
 
           alert('Ops! Parece que algo deu errado! Por favor, preencha todos os dados obrigatórios* ou pelo menos a primeira semana da seção "Menu Semanas". Se ainda estiver com problemas, consulte o guia através do botão +Ajuda.');
-      
+
           return (
             null
           )
     }
-  } 
-  
-  
-  
+  }
+
+
+
   // -------------------------- FUN��ES -------------------------------------
-  
+
   function transformaData(x){
     let meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
     let y = x.split('-');
     y[1] = meses[parseInt(y[1])-1];
     return(y);
   }
-  
+
   function transformaData2(x){
     let meses = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
     let y = x.split('-');

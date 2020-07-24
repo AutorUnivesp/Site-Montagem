@@ -9,7 +9,7 @@ function montaCabecalho() {
     let dataSemana6 = document.getElementById('data-semana6').value;
     let dataSemana7 = document.getElementById('data-semana7').value;
     let dataSemana8 = document.getElementById('data-semana8').value;
-  
+
     let temaSemana1 = document.getElementById('tema-semana1').value;
     let temaSemana2 = document.getElementById('tema-semana2').value;
     let temaSemana3 = document.getElementById('tema-semana3').value;
@@ -18,7 +18,7 @@ function montaCabecalho() {
     let temaSemana6 = document.getElementById('tema-semana6').value;
     let temaSemana7 = document.getElementById('tema-semana7').value;
     let temaSemana8 = document.getElementById('tema-semana8').value;
-  
+
     let linkSemana1 = document.getElementById('link-semana1').value;
     let linkSemana2 = document.getElementById('link-semana2').value;
     let linkSemana3 = document.getElementById('link-semana3').value;
@@ -27,17 +27,17 @@ function montaCabecalho() {
     let linkSemana6 = document.getElementById('link-semana6').value;
     let linkSemana7 = document.getElementById('link-semana7').value;
     let linkSemana8 = document.getElementById('link-semana8').value;
-  
+
     let nomeDisciplina = document.getElementById('disciplinaName').value;
     let bannerDisciplina = document.getElementById('bannerField').value;
     let cursoName = document.getElementById('curseField').value;
     let planoEnsino = document.getElementById('planoField').value;
-  
+
     let qtdeHoras = document.getElementById('cargaHoraria').value;
     let horaSemana = document.getElementById('horaSemana').value;
     let dataProva = document.getElementById('dataProva').value;
     let data2Prova = document.getElementById('dataProva1').value;
-  
+
     let cabecalho = {
       date1: dataSemana1, date2: dataSemana2, date3: dataSemana3, date4: dataSemana4,
       date5: dataSemana5, date6: dataSemana6, date7: dataSemana7, date8: dataSemana8,
@@ -48,7 +48,7 @@ function montaCabecalho() {
       disciplina: nomeDisciplina, banner: bannerDisciplina, curso: cursoName,
       plano: planoEnsino, horas: qtdeHoras, horaSemana: horaSemana, prova: dataProva, prova2: data2Prova, modelo: modeloCabecalho
     }
- 
+
     if (cabecalho.disciplina !== "" && cabecalho.banner !== "" && cabecalho.curso !== ""
         && cabecalho.plano !== "" && cabecalho.horas !== "" && cabecalho.horaSemana !== ""
         && cabecalho.prova !== "" && cabecalho.prova2 == "" && cabecalho.tema1 !== ""
@@ -57,7 +57,7 @@ function montaCabecalho() {
         && cabecalho.tema8 == "" && cabecalho.modelo !== "") {
 
         console.log('dentro do if 1')
-        
+
         let copia = `
         <div class="header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + cabecalho.banner} alt="" /> <span class="course-name">${cabecalho.curso}</span>
         <a class="btn btn-syllabus" target="_blank" href=${cabecalho.plano.replace("view?usp=sharing", "preview")}>Plano de Ensino</a>
@@ -66,10 +66,10 @@ function montaCabecalho() {
         <a class="btn btn-syllabus" target="_blank" href=${cabecalho.plano.replace("view?usp=sharing", "preview")}>Plano de Ensino</a>
         <div class="planejamento-estudo">
           <h1>Planejamento de Estudos</h1>
-          <p style="marginTop: 0;">Esta disciplina � de <strong>${cabecalho.horas} horas</strong></p>
-          <p>Est� previsto que voc� use cerca de <strong>${cabecalho.horaSemana} horas/semana</strong></p>
+          <p style="marginTop: 0;">Esta disciplina é de <strong>${cabecalho.horas} horas</strong></p>
+          <p>Está previsto que você use cerca de <strong>${cabecalho.horaSemana} horas/semana</strong></p>
           <hr />
-          <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente no dia <strong>${transformaData(cabecalho.prova)[2]}/${transformaData2(cabecalho.prova)[1]}</strong>. Qualquer <strong>exce��o</strong> ser� informada por e-mail.</p>
+          <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente no dia <strong>${transformaData(cabecalho.prova)[2]}/${transformaData2(cabecalho.prova)[1]}</strong>. Qualquer <strong>exceção</strong> será informada por e-mail.</p>
         </div>
         <br />
         <span class="semana-1">1</span>
@@ -87,30 +87,30 @@ function montaCabecalho() {
         <span class="semana-7">7</span>
         <h1 class="semana-7">${cabecalho.tema7}</h1>
       </div>`
-        
+
         navigator.clipboard.writeText(copia)
-        
-        
-        
-    } else if (cabecalho.disciplina !== "" && cabecalho.banner !== "" && cabecalho.curso !== "" 
-              && cabecalho.plano !== "" && cabecalho.horas !== "" && cabecalho.horaSemana !== "" 
-              && cabecalho.prova !== "" && cabecalho.prova2 !== "" && cabecalho.tema1 !== "" 
-              && cabecalho.tema2 !== "" && cabecalho.tema3 !== "" && cabecalho.tema4 !== "" 
+
+
+
+    } else if (cabecalho.disciplina !== "" && cabecalho.banner !== "" && cabecalho.curso !== ""
+              && cabecalho.plano !== "" && cabecalho.horas !== "" && cabecalho.horaSemana !== ""
+              && cabecalho.prova !== "" && cabecalho.prova2 !== "" && cabecalho.tema1 !== ""
+              && cabecalho.tema2 !== "" && cabecalho.tema3 !== "" && cabecalho.tema4 !== ""
               && cabecalho.tema5 !== "" && cabecalho.tema6 !== "" && cabecalho.tema7 !== ""
               && cabecalho.tema8 == "" && cabecalho.modelo !== "") {
 
       console.log('dentro do if 2')
-      let copia =  
+      let copia =
       `<div class="header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + cabecalho.banner} alt="" /> <span class="course-name">${cabecalho.curso}</span>
       <h1 class="discipline-name">{cabecalho.disciplina}</h1>
       <h2 class="tipo">${cabecalho.modelo}</h2>
       <a class="btn btn-syllabus" target="_blank" href=${cabecalho.plano.replace("view?usp=sharing", "preview")}>Plano de Ensino</a>
       <div class="planejamento-estudo">
         <h1>Planejamento de Estudos</h1>
-        <p style="marginTop: 0;">Esta disciplina � de <strong>${cabecalho.horas} horas</strong></p>
-        <p>Est� previsto que voc� use cerca de <strong>${cabecalho.horaSemanal} horas/semana</strong></p>
+        <p style="marginTop: 0;">Esta disciplina é de <strong>${cabecalho.horas} horas</strong></p>
+        <p>Está previsto que você use cerca de <strong>${cabecalho.horaSemanal} horas/semana</strong></p>
         <hr />
-        <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente nos dias <strong>${transformaData(cabecalho.prova)[2]}/${transformaData2(cabecalho.prova)[1]}</strong> e <strong> ${transformaData(cabecalho.prova2)[2]}/${transformaData2(cabecalho.prova2)[1]}</strong>. <br /> Qualquer <strong>exce��o</strong> ser� informada por e-mail.</p>
+        <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente nos dias <strong>${transformaData(cabecalho.prova)[2]}/${transformaData2(cabecalho.prova)[1]}</strong> e <strong> ${transformaData(cabecalho.prova2)[2]}/${transformaData2(cabecalho.prova2)[1]}</strong>. <br /> Qualquer <strong>exceção</strong> será informada por e-mail.</p>
       </div>
       <br />
       <span class="semana-1">1</span>
@@ -130,17 +130,17 @@ function montaCabecalho() {
      </div>`
 
      navigator.clipboard.writeText(copia)
-    
-    } else if (cabecalho.disciplina !== "" && cabecalho.banner !== "" && cabecalho.curso !== "" 
-              && cabecalho.plano !== "" && cabecalho.horas == "" && cabecalho.horaSemana == "0" 
-              && cabecalho.prova == "" && cabecalho.prova2 == "" && cabecalho.tema1 !== "" 
-              && cabecalho.tema2 !== "" && cabecalho.tema3 !== "" && cabecalho.tema4 !== "" 
-              && cabecalho.tema5 !== "" && cabecalho.tema6 !== "" && cabecalho.tema7 !== "" 
+
+    } else if (cabecalho.disciplina !== "" && cabecalho.banner !== "" && cabecalho.curso !== ""
+              && cabecalho.plano !== "" && cabecalho.horas == "" && cabecalho.horaSemana == "0"
+              && cabecalho.prova == "" && cabecalho.prova2 == "" && cabecalho.tema1 !== ""
+              && cabecalho.tema2 !== "" && cabecalho.tema3 !== "" && cabecalho.tema4 !== ""
+              && cabecalho.tema5 !== "" && cabecalho.tema6 !== "" && cabecalho.tema7 !== ""
               && cabecalho.tema8 == "" && cabecalho.modelo !== "") {
 
     console.log('dentro do if 3')
 
-    let copia = 
+    let copia =
     `<div class="header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + cabecalho.banner} alt="" /> <span class="course-name">${cabecalho.curso}</span>
     <h1 class="discipline-name">${cabecalho.disciplina}</h1>
     <h2 class="tipo">${cabecalho.modelo}</h2>
@@ -163,27 +163,27 @@ function montaCabecalho() {
   </div>`
 
   navigator.clipboard.writeText(copia)
-        
-  } else if (cabecalho.disciplina !== "" && cabecalho.banner !== "" && cabecalho.curso !== "" 
-            && cabecalho.plano !== "" && cabecalho.horas !== "" && cabecalho.horaSemana !== "" 
-            && cabecalho.prova !== "" && cabecalho.prova2 == "" && cabecalho.tema1 !== "" 
-            && cabecalho.tema2 !== "" && cabecalho.tema3 !== "" && cabecalho.tema4 !== "" 
-            && cabecalho.tema5 !== "" && cabecalho.tema6 !== "" && cabecalho.tema7 !== "" 
+
+  } else if (cabecalho.disciplina !== "" && cabecalho.banner !== "" && cabecalho.curso !== ""
+            && cabecalho.plano !== "" && cabecalho.horas !== "" && cabecalho.horaSemana !== ""
+            && cabecalho.prova !== "" && cabecalho.prova2 == "" && cabecalho.tema1 !== ""
+            && cabecalho.tema2 !== "" && cabecalho.tema3 !== "" && cabecalho.tema4 !== ""
+            && cabecalho.tema5 !== "" && cabecalho.tema6 !== "" && cabecalho.tema7 !== ""
             && cabecalho.tema8 !== "" && cabecalho.modelo !== "" ) {
 
     console.log('dentro do if 4')
 
-     let copia = 
+     let copia =
      `<div class="header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + cabecalho.banner} alt="" /> <span class="course-name">${cabecalho.curso}</span>
      <h1 class="discipline-name">${cabecalho.disciplina}</h1>
-     <h2 class="tipo">{cabecalho.modelo}</h2>
+     <h2 class="tipo">${cabecalho.modelo}</h2>
      <a class="btn btn-syllabus" target="_blank" href=${cabecalho.plano.replace("view?usp=sharing", "preview")}>Plano de Ensino</a>
      <div class="planejamento-estudo">
        <h1>Planejamento de Estudos</h1>
-       <p style="marginTop: 0;">Esta disciplina � de <strong>${cabecalho.horas} horas</strong></p>
-       <p>Est� previsto que voc� use cerca de <strong>${cabecalho.horaSemanal} horas/semana</strong></p>
+       <p style="marginTop: 0;">Esta disciplina é de <strong>${cabecalho.horas} horas</strong></p>
+       <p>Está previsto que você use cerca de <strong>${cabecalho.horaSemanal} horas/semana</strong></p>
        <hr />
-       <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente no dia <strong>${transformaData(cabecalho.prova)[2]}/${transformaData2(cabecalho.prova)[1]}</strong>. Qualquer <strong>exce��o</strong> ser� informada por e-mail.</p>
+       <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente no dia <strong>${transformaData(cabecalho.prova)[2]}/${transformaData2(cabecalho.prova)[1]}</strong>. Qualquer <strong>exceção</strong> será informada por e-mail.</p>
      </div>
      <br />
      <span class="semana-1">1</span>
@@ -203,30 +203,30 @@ function montaCabecalho() {
      <span class="semana-8">8</span>
      <h1 class="semana-8">${cabecalho.tema8}</h1>
    </div>`
-   
+
    navigator.clipboard.writeText(copia)
-     
-     
-  } else if (cabecalho.disciplina !== "" && cabecalho.banner !== "" && cabecalho.curso !== "" 
-            && cabecalho.plano !== "" && cabecalho.horas !== "" && cabecalho.horaSemana !== "" 
-            && cabecalho.prova !== "" && cabecalho.prova2 !== "" && cabecalho.tema1 !== "" 
-            && cabecalho.tema2 !== "" && cabecalho.tema3 !== "" && cabecalho.tema4 !== "" 
-            && cabecalho.tema5 !== "" && cabecalho.tema6 !== "" && cabecalho.tema7 !== "" 
+
+
+  } else if (cabecalho.disciplina !== "" && cabecalho.banner !== "" && cabecalho.curso !== ""
+            && cabecalho.plano !== "" && cabecalho.horas !== "" && cabecalho.horaSemana !== ""
+            && cabecalho.prova !== "" && cabecalho.prova2 !== "" && cabecalho.tema1 !== ""
+            && cabecalho.tema2 !== "" && cabecalho.tema3 !== "" && cabecalho.tema4 !== ""
+            && cabecalho.tema5 !== "" && cabecalho.tema6 !== "" && cabecalho.tema7 !== ""
             && cabecalho.tema8 !== "" && cabecalho.modelo !== "" ){
 
     console.log('dentro do if 5')
 
-    let copia = 
+    let copia =
     `<div class="header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + cabecalho.banner} alt="" /> <span class="course-name">${cabecalho.curso}</span>
     <h1 class="discipline-name">${cabecalho.disciplina}</h1>
     <h2 class="tipo">${cabecalho.modelo}</h2>
     <a class="btn btn-syllabus" target="_blank" href=${cabecalho.plano.replace("view?usp=sharing", "preview")}>Plano de Ensino</a>
     <div class="planejamento-estudo">
       <h1>Planejamento de Estudos</h1>
-      <p style="marginTop: 0">Esta disciplina � de <strong>${cabecalho.horas} horas</strong></p>
-      <p>Est� previsto que voc� use cerca de <strong>${cabecalho.horaSemana} horas/semana</strong></p>
+      <p style="marginTop: 0">Esta disciplina é de <strong>${cabecalho.horas} horas</strong></p>
+      <p>Está previsto que você use cerca de <strong>${cabecalho.horaSemana} horas/semana</strong></p>
       <hr />
-      <p>A <strong>prova</strong> desta disciplina ser� aplicada exclusivamente nos dias <strong>${transformaData(cabecalho.prova)[2]}/${transformaData2(cabecalho.prova)[1]}</strong> e <strong> ${transformaData(cabecalho.prova2)[2]}/${transformaData2(cabecalho.prova2)[1]}</strong>. <br /> Qualquer <strong>exce��o</strong> ser� informada por e-mail.</p>
+      <p>A <strong>prova</strong> desta disciplina será aplicada exclusivamente nos dias <strong>${transformaData(cabecalho.prova)[2]}/${transformaData2(cabecalho.prova)[1]}</strong> e <strong> ${transformaData(cabecalho.prova2)[2]}/${transformaData2(cabecalho.prova2)[1]}</strong>. <br /> Qualquer <strong>exceção</strong> será informada por e-mail.</p>
     </div>
     <br />
     <span class="semana-1">1</span>
@@ -249,16 +249,16 @@ function montaCabecalho() {
 
     navigator.clipboard.writeText(copia)
 
-  } else if ( cabecalho.disciplina !== "" && cabecalho.banner !== "" && cabecalho.curso !== "" 
-            && cabecalho.plano !== "" && cabecalho.horas == "" && cabecalho.horaSemana == "0" 
-            && cabecalho.prova == "" && cabecalho.prova2 == "" && cabecalho.tema1 !== "" 
-            && cabecalho.tema2 !== "" && cabecalho.tema3 !== "" && cabecalho.tema4 !== "" 
-            && cabecalho.tema5 !== "" && cabecalho.tema6 !== "" && cabecalho.tema7 !== "" 
+  } else if ( cabecalho.disciplina !== "" && cabecalho.banner !== "" && cabecalho.curso !== ""
+            && cabecalho.plano !== "" && cabecalho.horas == "" && cabecalho.horaSemana == "0"
+            && cabecalho.prova == "" && cabecalho.prova2 == "" && cabecalho.tema1 !== ""
+            && cabecalho.tema2 !== "" && cabecalho.tema3 !== "" && cabecalho.tema4 !== ""
+            && cabecalho.tema5 !== "" && cabecalho.tema6 !== "" && cabecalho.tema7 !== ""
             && cabecalho.tema8 !== "" && cabecalho.modelo !== "" ) {
 
     console.log('dentro do if 6')
 
-    let copia = 
+    let copia =
     `<div class="header"><img class="img-banner" src=${'https://assets.univesp.br/canvas/img/banners/' + cabecalho.banner} alt="" /> <span class="course-name">${cabecalho.curso}</span>
     <h1 class="discipline-name">${cabecalho.disciplina}</h1>
     <h2 class="tipo">${cabecalho.modelo}</h2>
@@ -286,7 +286,7 @@ function montaCabecalho() {
 
 
   } else{
-        
+
         alert('Ops! Parece que algo deu errado! Por favor, preencha todos os dados obrigatórios do construtor da página de cabeçalho. Se ainda estiver com problemas, consulte o guia através do botão +Ajuda.')
 
     return(
